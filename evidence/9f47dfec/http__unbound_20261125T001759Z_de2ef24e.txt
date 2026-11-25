@@ -1,0 +1,58 @@
+REQUEST:
+GET https://edu-evaluation.baliprov.dev/manifest.json
+User-Agent: pentest-ai/1.6.2 (compatible; rv:a2cfe36ea2c0; +https://pentestai.xyz)
+X-Request-ID: 7a3f9c21-4b08-4e11-9c02-a2cfe36ea2c0
+
+
+
+RESPONSE:
+HTTP 200
+Date: Wed, 25 Nov 2026 00:17:59 GMT
+Content-Type: application/json; charset=UTF-8
+Content-Length: 754
+Connection: keep-alive
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Permissions-Policy: clipboard-read=(self), clipboard-write=(self)
+Referrer-Policy: same-origin
+X-DNS-Prefetch-Control: on
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-XSS-Protection: 1; mode=block
+Accept-Ranges: bytes
+Cache-Control: public, max-age=0
+Last-Modified: Tue, 26 May 2026 01:43:26 GMT
+Etag: W/"2f2-19e61f37630"
+Vary: Accept-Encoding
+
+{
+    "theme_color": "#4a90e2",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "name": "Bali Melajah",
+    "short_name": "Bali Melajah",
+    "description": "Bali Melajah",
+    "icons": [
+        {
+            "src": "/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

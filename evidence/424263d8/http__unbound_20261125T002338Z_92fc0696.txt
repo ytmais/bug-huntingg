@@ -1,0 +1,17 @@
+REQUEST:
+POST https://meilisearch.baliprov.dev/rest/user/reset-password
+User-Agent: pentest-ai/1.6.2 (compatible; rv:a2cfe36ea2c0; +https://pentestai.xyz)
+Content-Type: application/json
+X-Request-ID: 7a3f9c21-4b08-4e11-9c02-a2cfe36ea2c0
+X-Forwarded-Server: ptai-host-canary.example
+
+{"email": "ptai-canary@ptai-host-canary.example"}
+
+RESPONSE:
+HTTP 404
+Date: Wed, 25 Nov 2026 00:23:38 GMT
+Transfer-Encoding: chunked
+Connection: keep-alive
+Server: nginx/1.10.3
+Content-Encoding: gzip
+

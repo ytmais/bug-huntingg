@@ -1,0 +1,43 @@
+REQUEST:
+POST https://sso.baliprov.dev/saml/acs
+User-Agent: pentest-ai/1.6.2 (compatible; rv:a2cfe36ea2c0; +https://pentestai.xyz)
+X-Request-ID: 7a3f9c21-4b08-4e11-9c02-a2cfe36ea2c0
+Content-Type: application/x-www-form-urlencoded
+
+SAMLResponse=PHNhbWxwOlJlc3BvbnNlIHhtbG5zOnNhbWxwPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6cHJvdG9jb2wiIHhtbG5zOnNhbWw9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphc3NlcnRpb24iIElEPSJyZXNwb25zZS0xIiBWZXJzaW9uPSIyLjAiIElzc3VlSW5zdGFudD0iMjAyNi0wMS0wMVQwMDowMDowMFoiPjxzYW1sOklzc3Vlcj5odHRwczovL2lkcC52aWN0aW0uY29tPC9zYW1sOklzc3Vlcj48c2FtbDpBc3NlcnRpb24gSUQ9InNpZ25lZC1yZWFsIiB4bWxuczpzYW1sPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXNzZXJ0aW9uIj48c2FtbDpTdWJqZWN0PjxzYW1sOk5hbWVJRD5hbGljZUBleGFtcGxlLmNvbTwvc2FtbDpOYW1lSUQ+PC9zYW1sOlN1YmplY3Q+PGRzOlNpZ25hdHVyZSB4bWxuczpkcz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnIyI+PGRzOlNpZ25lZEluZm8+PGRzOlJlZmVyZW5jZSBVUkk9IiNzaWduZWQtcmVhbCI+PGRzOkRpZ2VzdFZhbHVlPkFBQUE8L2RzOkRpZ2VzdFZhbHVlPjwvZHM6UmVmZXJlbmNlPjwvZHM6U2lnbmVkSW5mbz48ZHM6U2lnbmF0dXJlVmFsdWU+QUFBQTwvZHM6U2lnbmF0dXJlVmFsdWU+PC9kczpTaWduYXR1cmU+PC9zYW1sOkFzc2VydGlvbj48L3NhbWxwOlJlc3BvbnNlPg==&RelayState=/
+
+RESPONSE:
+HTTP 405
+Date: Tue, 24 Nov 2026 23:51:13 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Allow: GET, HEAD
+Cache-Control: no-cache, private
+Content-Security-Policy: upgrade-insecure-requests; default-src 'self' https: data: blob:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: https://cdn.datatables.net https://cdnjs.cloudflare.com https://fonts.googleapis.com https://stackpath.bootstrapcdn.com 'unsafe-inline'; style-src-elem 'self' https: https://cdn.datatables.net https://cdnjs.cloudflare.com https://fonts.googleapis.com https://stackpath.bootstrapcdn.com 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https: data: https://fonts.gstatic.com; connect-src 'self' https:; object-src 'none'; frame-ancestors 'self'; base-uri 'self';
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex,nofollow,noarchive" />
+    <title>An Error Occurred: Method Not Allowed</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>❌</text></svg>" />
+    <style>body { background-color: #fff; color: #222; font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; margin: 0; }
+.container { margin: 30px; max-width: 600px; }
+h1 { color: #dc3545; font-size: 24px; }
+h2 { font-size: 18px; }</style>
+</head>
+<body>
+<div class="container">
+    <h1>Oops! An Error Occurred</h1>
+    <h2>The server returned a "405 Method Not Allowed".</h2>
+
+    <p>
+        Something is broken. Please let us know what you were doing when this error occurred.
+        We will fix it as soon as possible. Sorry for any inconvenience caused.
+    </p>
+</div>
+</body>
+</html>

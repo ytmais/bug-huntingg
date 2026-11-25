@@ -1,0 +1,21 @@
+REQUEST:
+POST https://gitlab.baliprov.dev/file-upload
+User-Agent: pentest-ai/1.6.2 (compatible; rv:a2cfe36ea2c0; +https://pentestai.xyz)
+X-Request-ID: 7a3f9c21-4b08-4e11-9c02-a2cfe36ea2c0
+Content-Type: multipart/form-data; boundary=----ptaiUploadBoundary7MA4YWxkTrZu0gW
+Content-Length: 1012
+Accept: */*
+
+<binary>
+
+RESPONSE:
+HTTP 401
+Server: nginx
+Date: Wed, 25 Nov 2026 00:12:32 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Length: 17
+Connection: keep-alive
+X-Content-Type-Options: nosniff
+Strict-Transport-Security: max-age=63072000
+
+401 Unauthorized

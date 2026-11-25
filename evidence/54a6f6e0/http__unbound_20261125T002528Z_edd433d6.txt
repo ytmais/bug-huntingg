@@ -1,0 +1,23 @@
+REQUEST:
+GET https://stirling-pdf.baliprov.dev/api/url?link=http%3A%2F%2Flocalhost%3A8080%2F
+User-Agent: pentest-ai/1.6.2 (compatible; rv:a2cfe36ea2c0; +https://pentestai.xyz)
+X-Request-ID: 7a3f9c21-4b08-4e11-9c02-a2cfe36ea2c0
+
+
+
+RESPONSE:
+HTTP 401
+Date: Wed, 25 Nov 2026 00:25:28 GMT
+Content-Type: application/json
+Content-Length: 35
+Connection: keep-alive
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Frame-Options: DENY
+
+{"error":"Authentication required"}

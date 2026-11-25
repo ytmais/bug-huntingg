@@ -1,0 +1,31 @@
+REQUEST:
+GET https://gitlab.baliprov.dev/api/graphql
+User-Agent: pentest-ai/1.6.2 (compatible; rv:a2cfe36ea2c0; +https://pentestai.xyz)
+X-Request-ID: 7a3f9c21-4b08-4e11-9c02-a2cfe36ea2c0
+
+
+
+RESPONSE:
+HTTP 422
+Server: nginx
+Date: Wed, 25 Nov 2026 00:12:34 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 66
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Security-Policy: 
+NEL: {"max_age": 0}
+Permissions-Policy: interest-cohort=()
+Vary: Origin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Gitlab-Custom-Error: 1
+X-Gitlab-Meta: {"correlation_id":"01M880R31QRS9QT7FQ1AK1NM64","version":"1"}
+X-Permitted-Cross-Domain-Policies: none
+X-Request-ID: 01M880R31QRS9QT7FQ1AK1NM64
+X-Runtime: 0.025344
+X-Ua-Compatible: IE=edge
+X-XSS-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000
+
+{"errors":[{"message":"Mutations are forbidden in GET requests"}]}

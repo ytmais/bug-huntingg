@@ -1,0 +1,17 @@
+REQUEST:
+GET https://edu-evaluation.baliprov.dev/static/uploads/
+User-Agent: pentest-ai/1.6.2 (compatible; rv:a2cfe36ea2c0; +https://pentestai.xyz)
+X-Request-ID: 7a3f9c21-4b08-4e11-9c02-a2cfe36ea2c0
+
+
+
+RESPONSE:
+HTTP 308
+Date: Wed, 25 Nov 2026 00:18:05 GMT
+Transfer-Encoding: chunked
+Connection: keep-alive
+Location: /static/uploads
+Refresh: 0;url=/static/uploads
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+/static/uploads

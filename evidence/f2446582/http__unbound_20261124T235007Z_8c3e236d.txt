@@ -1,0 +1,36 @@
+REQUEST:
+GET https://sso.baliprov.dev/
+User-Agent: pentest-ai/1.6.2 (compatible; rv:a2cfe36ea2c0; +https://pentestai.xyz)
+X-Request-ID: 7a3f9c21-4b08-4e11-9c02-a2cfe36ea2c0
+
+
+
+RESPONSE:
+HTTP 302
+Date: Tue, 24 Nov 2026 23:50:07 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Cache-Control: no-cache, private
+Location: https://sso.baliprov.dev/login
+Set-Cookie: sso_session=eyJpdiI6IjQrbUYxaG5zWFZsM3FxV0tYenF4VFE9PSIsInZhbHVlIjoiQ251aGVxeTRhTkhiWm1aSW5aK1NPMDFrd3RuUVdXVWVBZ3R2K3M0ZnR4SkVRa0tKTUxKdnUvcytrNTlWYlNmUVp0bXNpMmxyQnFXZUFFbS8wVEdHUGowMmNCZGsvL0FGT09qazZ2UmJqUGNRK25YNDFYRWFoY0ZWT1p3N1VUYW0iLCJtYWMiOiI4YTIxMzgxMTY5ZjkxMjY2MTgxNTYwMjVlMzRhNTczMmU3NWY4MmE3Y2RmYzE3Yzg1MGFiZDZlN2RlMmVlYjE4IiwidGFnIjoiIn0%3D; path=/; domain=sso.baliprov.dev; secure; httponly
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+Content-Security-Policy: upgrade-insecure-requests; default-src 'self' https: data: blob:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: https://cdn.datatables.net https://cdnjs.cloudflare.com https://fonts.googleapis.com https://stackpath.bootstrapcdn.com 'unsafe-inline'; style-src-elem 'self' https: https://cdn.datatables.net https://cdnjs.cloudflare.com https://fonts.googleapis.com https://stackpath.bootstrapcdn.com 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https: data: https://fonts.gstatic.com; connect-src 'self' https:; object-src 'none'; frame-ancestors 'self'; base-uri 'self';
+Referrer-Policy: no-referrer
+Permissions-Policy: camera=(self)
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="refresh" content="0;url='https://sso.baliprov.dev/login'" />
+
+        <title>Redirecting to https://sso.baliprov.dev/login</title>
+    </head>
+    <body>
+        Redirecting to <a href="https://sso.baliprov.dev/login">https://sso.baliprov.dev/login</a>.
+    </body>
+</html>

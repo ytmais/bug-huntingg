@@ -1,0 +1,11 @@
+     44 gemini
+     34 uphold
+     12 metamask
+     10 kucoin
+      9 kraken
+      7 phantom
+      6 coinbase
+      2 trezor
+      2 luno
+      2 binance
+      1 ronin

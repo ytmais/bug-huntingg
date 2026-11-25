@@ -1,0 +1,332 @@
+REQUEST:
+GET https://gitlab.baliprov.dev/search?q=%7B%7B%23with%20this%7D%7D%7B%7Bthis%7D%7D%7B%7B%2Fwith%7D%7D
+User-Agent: pentest-ai/1.6.2 (compatible; rv:a2cfe36ea2c0; +https://pentestai.xyz)
+X-Request-ID: 7a3f9c21-4b08-4e11-9c02-a2cfe36ea2c0
+
+
+
+RESPONSE:
+HTTP 200
+Server: nginx
+Date: Wed, 25 Nov 2026 00:15:09 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept, X-Requested-With
+Cache-Control: max-age=0, private, must-revalidate
+Content-Security-Policy: 
+Etag: W/"e6459f84db3b5521b10c9dfb7d3a3cbd"
+NEL: {"max_age": 0}
+Permissions-Policy: interest-cohort=()
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Gitlab-Meta: {"correlation_id":"01M880WSW5KFG2Q4VA4T0NC7YA","version":"1"}
+X-Permitted-Cross-Domain-Policies: none
+X-Request-ID: 01M880WSW5KFG2Q4VA4T0NC7YA
+X-Runtime: 0.107237
+X-Ua-Compatible: IE=edge
+X-XSS-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Encoding: gzip
+
+<!DOCTYPE html>
+<html class="gl-system ui-neutral with-top-bar with-header page-with-panels  user-logged-out" lang="en">
+<head prefix="og: http://ogp.me/ns#">
+<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Search · GitLab</title>
+<link as="font" crossorigin="" href="/assets/gitlab-sans/GitLabSans-9892dc17af892e03de41625c0ee325117a3b8ee4ba6005f3a3eac68510030aed.woff2" rel="preload">
+<link as="font" crossorigin="" href="/assets/gitlab-sans/GitLabSans-Italic-f96f17332d67b21ada2dfba5f0c0e1d5801eab99330472057bf18edd93d4ccf7.woff2" rel="preload">
+<link as="font" crossorigin="" href="/assets/gitlab-mono/GitLabMono-29c2152dac8739499dd0fe5cd37a486ebcc7d4798c9b6d3aeab65b3172375b05.woff2" rel="preload">
+<link as="font" crossorigin="" href="/assets/gitlab-mono/GitLabMono-Italic-af36701a2188df32a9dcea12e0424c380019698d4f76da9ad8ea2fd59432cf83.woff2" rel="preload">
+
+<script>
+//<![CDATA[
+window.gon={};
+//]]>
+</script>
+
+<script>
+//<![CDATA[
+const root = document.documentElement;
+if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  root.classList.add('gl-dark');
+}
+
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+  if (e.matches) {
+    root.classList.add('gl-dark');
+  } else {
+    root.classList.remove('gl-dark');
+  }
+});
+
+//]]>
+</script>
+
+
+
+
+<meta content="light dark" name="color-scheme">
+<link rel="stylesheet" href="/assets/application-df5bda75fdb94e7f3e9e97781f24b25015267fef9c8ef3211582a22b5ea85b20.css" media="(prefers-color-scheme: light)" />
+<link rel="stylesheet" href="/assets/application_dark-9dd677c6a298fab7e531dba016fb0a735940f68684f595a6e3714658bace6b32.css" media="(prefers-color-scheme: dark)" />
+<link rel="stylesheet" href="/assets/page_bundles/search-a2867fce95655ca0e03ab25ee54cd353a3c577bd9a8a811ac65cceb841742bde.css" /><link rel="stylesheet" href="/assets/page_bundles/commit_description-9e7efe20f0cef17d0606edabfad0418e9eb224aaeaa2dae32c817060fa60abcc.css" /><link rel="stylesheet" href="/assets/page_bundles/design_management-7f46da841f39673afa8cb0c263561c7ed7ba5bb19b8d0a13b37215783c4c904d.css" /><link rel="stylesheet" href="/assets/page_bundles/issuable_list-2011c09d156c199953618a4f91d5e4977cbe0e55950809e0520ff63f69a4a658.css" /><link rel="stylesheet" href="/assets/page_bundles/issues_list-1d9cdbbaf9469f9073c410dc7a7f2543b02071773aa332daf63803eaaec87e62.css" /><link rel="stylesheet" href="/assets/page_bundles/issues_show-ec954ae4932e0bfe7383adee3c75f53c5985c6edea62c7ae4370cb1f6e85a91a.css" /><link rel="stylesheet" href="/assets/page_bundles/notes_shared-80d039cfdb92eed90319ba1bdbb1dabaf7bc8b543e73f33d4220f670654a1546.css" /><link rel="stylesheet" href="/assets/page_bundles/work_items-30f28543d983bf5c7928f79cdcb693d7c7f00693c97e291e572bd70a50c197c7.css" />
+<link rel="stylesheet" href="/assets/tailwind-879f3bf274471894e1cfadbe48d904f3a6d45b59f2264ee1d6cf47c45a0e712b.css" />
+
+
+<link rel="stylesheet" href="/assets/fonts-deb7ad1d55ca77c0172d8538d53442af63604ff490c74acc2859db295c125bdb.css" />
+<link rel="stylesheet" href="/assets/highlight/themes/white-2512b051af2aba63354e3a6e6b8a574e666261ddbe54bd95982cd545577c0f9b.css" media="(prefers-color-scheme: light)" />
+<link rel="stylesheet" href="/assets/highlight/themes/dark-2cd9f35b637538c7bbc5f728be89f8c7974eb1ad73216406c15852cf2581206c.css" media="(prefers-color-scheme: dark)" />
+
+<script src="/assets/webpack/runtime.badd6bdb.bundle.js" defer="defer"></script>
+<script src="/assets/webpack/framework.2e4fe7c2.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/tracker.663eadd4.chunk.js" defer="defer"></script>
+<script>
+//<![CDATA[
+window.snowplowOptions = {"namespace":"gl","hostname":"gitlab.baliprov.dev:443","postPath":"/-/collect_events","forceSecureTracker":true,"appId":"gitlab_sm"};
+gl = window.gl || {};
+gl.snowplowStandardContext = {"schema":"iglu:com.gitlab/gitlab_standard/jsonschema/1-1-8","data":{"environment":"self-managed","source":"gitlab-rails","client_type":"api","correlation_id":"01M880WSW5KFG2Q4VA4T0NC7YA","extra":{},"user_id":null,"global_user_id":null,"user_type":null,"is_gitlab_team_member":null,"namespace_id":null,"ultimate_parent_namespace_id":null,"project_id":null,"feature_enabled_by_namespace_ids":null,"realm":"self-managed","deployment_type":"self-managed","context_generated_at":"2026-11-25T08:15:09.290+08:00","organization_id":1}};
+gl.snowplowPseudonymizedPageUrl = "https://gitlab.baliprov.dev/search?q=masked_q";
+gl.maskedDefaultReferrerUrl = null;
+gl.ga4MeasurementId = 'G-ENFH3X7M5Y';
+gl.duoEvents = [];
+gl.onlySendDuoEvents = false;
+
+
+//]]>
+</script>
+
+
+
+<script src="/assets/webpack/vue3_runtime.0e984f22.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/gitlab_ui.d36f5e00.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/main_shared.a204bc70.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/16542.3f3b9d90.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/81957.638ad2ab.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/33480.6df4a556.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/68097.a5c27226.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/6368.b30463b3.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/18052.f013cbe1.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/super_sidebar.57396d1e.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/main.2ef51941.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/14662.a5aa16c9.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/pages.search.show.66aa60e4.chunk.js" defer="defer"></script>
+
+<meta content="object" property="og:type">
+<meta content="GitLab" property="og:site_name">
+<meta content="Search · GitLab" property="og:title">
+<meta content="SPBE Bali" property="og:description">
+<meta content="https://gitlab.baliprov.dev/assets/twitter_card-570ddb06edf56a2312253c5872489847a0f385112ddbcd71ccfa1570febab5d2.jpg" property="og:image">
+<meta content="64" property="og:image:width">
+<meta content="64" property="og:image:height">
+<meta content="https://gitlab.baliprov.dev/search?q=%7B%7B%23with%20this%7D%7D%7B%7Bthis%7D%7D%7B%7B/with%7D%7D" property="og:url">
+<meta content="summary" property="twitter:card">
+<meta content="Search · GitLab" property="twitter:title">
+<meta content="SPBE Bali" property="twitter:description">
+<meta content="https://gitlab.baliprov.dev/assets/twitter_card-570ddb06edf56a2312253c5872489847a0f385112ddbcd71ccfa1570febab5d2.jpg" property="twitter:image">
+
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="cCHBXWqBf-ti0gFBdXljbqw8hlDw1MriDuWXTZNJat3XXhLBuzGnJwODJ1Pf2XUOnMLUFKM0K9x3rWZctofzaA" />
+<meta name="csp-nonce" />
+<meta name="action-cable-url" content="/-/cable" />
+<link crossorigin="use-credentials" href="/-/manifest.json" rel="manifest">
+<link rel="icon" type="image/png" href="/assets/favicon-72a2cad5025aa931d6ea56c3201d1f18e68a8cd39788c7c80d5b2b82aa5143ef.png" id="favicon" data-original-href="/assets/favicon-72a2cad5025aa931d6ea56c3201d1f18e68a8cd39788c7c80d5b2b82aa5143ef.png" />
+<link rel="apple-touch-icon" type="image/x-icon" href="/assets/apple-touch-icon-b049d4bc0dd9626f31db825d61880737befc7835982586d015bded10b4435460.png" />
+<link crossorigin="use-credentials" href="/search/opensearch.xml" rel="search" title="Search GitLab" type="application/opensearchdescription+xml">
+
+
+
+
+<meta content="SPBE Bali" name="description">
+<meta content="#F1F0F6" media="(prefers-color-scheme: light)" name="theme-color">
+<meta content="#232128" media="(prefers-color-scheme: dark)" name="theme-color">
+</head>
+
+<body class="tab-width-8 gl-browser-generic gl-platform-other" data-page="search:show">
+<div id="js-tooltips-container"></div>
+
+<script>
+//<![CDATA[
+gl = window.gl || {};
+gl.client = {"isGeneric":true,"isOther":true};
+
+
+//]]>
+</script>
+
+
+<header class="super-topbar js-super-topbar"></header>
+<div class="layout-page js-page-layout page-with-super-sidebar">
+<script>
+//<![CDATA[
+const outer = document.createElement('div');
+outer.style.visibility = 'hidden';
+outer.style.overflow = 'scroll';
+document.body.appendChild(outer);
+const inner = document.createElement('div');
+outer.appendChild(inner);
+const scrollbarWidth = outer.offsetWidth - inner.offsetWidth;
+outer.parentNode.removeChild(outer);
+document.documentElement.style.setProperty('--scrollbar-width', `${scrollbarWidth}px`);
+
+//]]>
+</script><aside class="js-super-sidebar super-sidebar super-sidebar-loading" data-command-palette="{}" data-is-saas="false" data-sidebar="{&quot;is_logged_in&quot;:false,&quot;compare_plans_url&quot;:&quot;https://about.gitlab.com/pricing&quot;,&quot;current_menu_items&quot;:[],&quot;current_context_header&quot;:null,&quot;support_path&quot;:&quot;https://support.gitlab.com&quot;,&quot;display_whats_new&quot;:false,&quot;show_version_check&quot;:null,&quot;search&quot;:{&quot;search_context&quot;:{&quot;for_snippets&quot;:null}},&quot;panel_type&quot;:&quot;search&quot;,&quot;shortcut_links&quot;:[{&quot;title&quot;:&quot;Snippets&quot;,&quot;href&quot;:&quot;/explore/snippets&quot;,&quot;css_class&quot;:&quot;dashboard-shortcuts-snippets&quot;},{&quot;title&quot;:&quot;Groups&quot;,&quot;href&quot;:&quot;/explore/groups&quot;,&quot;css_class&quot;:&quot;dashboard-shortcuts-groups&quot;},{&quot;title&quot;:&quot;Projects&quot;,&quot;href&quot;:&quot;/explore/projects&quot;,&quot;css_class&quot;:&quot;dashboard-shortcuts-projects&quot;}],&quot;has_terms&quot;:false,&quot;allow_signup&quot;:&quot;false&quot;,&quot;pinned_items&quot;:[]}"></aside>
+
+
+<div class="broadcast-wrapper gl-rounded-lg gl-overflow-hidden">
+
+
+
+</div>
+<div class="panels-container gl-flex gl-gap-3">
+<div class="content-panels gl-flex-1 gl-w-full gl-flex gl-gap-0 gl-relative js-content-panels gl-@container/content-panels">
+<div class="paneled-view static-panel js-static-panel js-paneled-view content-wrapper">
+<div class="panel-header gl-@container/panel">
+<div class="panel-header-inner js-panel-header-inner">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Search","item":"https://gitlab.baliprov.dev/search?q=%7B%7B%23with%20this%7D%7D%7B%7Bthis%7D%7D%7B%7B/with%7D%7D"}]}
+
+
+</script>
+<div data-testid="breadcrumb-links" id="js-vue-page-breadcrumbs-wrapper">
+<div data-breadcrumbs-json="[{&quot;text&quot;:&quot;Search&quot;,&quot;href&quot;:&quot;/search?q=%7B%7B%23with%20this%7D%7D%7B%7Bthis%7D%7D%7B%7B/with%7D%7D&quot;,&quot;avatarPath&quot;:null}]" id="js-vue-page-breadcrumbs"></div>
+<div id="js-injected-page-breadcrumbs"></div>
+</div>
+<div id="js-page-breadcrumbs-extra"></div>
+
+
+
+<div class="panel-header-inner-actions">
+
+
+<div class="panel-header-inner-actions-portal-target js-panel-actions-portal-target"></div>
+</div>
+</div>
+</div>
+<div class="panel-content">
+<div class="panel-content-inner js-static-panel-inner">
+<div class="alert-wrapper alert-wrapper-top-space gl-flex gl-flex-col gl-gap-3 container-fluid container-limited">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+<div class="container-fluid container-limited ">
+<main class="content gl-@container/panel" id="content-body">
+<div id="js-drawer-container"></div>
+<div class="flash-container flash-container-page sticky" data-testid="flash-container">
+<div id="js-global-alerts"></div>
+</div>
+
+
+
+<div id="js-search-topbar"></div>
+<div class="results @md/panel:gl-flex">
+<div data-advanced-search-available="false" data-group-initial-json="null" data-navigation-json="{&quot;projects&quot;:{&quot;label&quot;:&quot;Projects&quot;,&quot;scope&quot;:&quot;projects&quot;,&quot;data&quot;:{&quot;testid&quot;:&quot;projects-tab&quot;},&quot;link&quot;:&quot;/search?scope=projects&quot;,&quot;active&quot;:true,&quot;count&quot;:&quot;0&quot;},&quot;groups&quot;:{&quot;label&quot;:&quot;Groups&quot;,&quot;scope&quot;:&quot;groups&quot;,&quot;data&quot;:null,&quot;link&quot;:&quot;/search?scope=groups&quot;,&quot;active&quot;:false,&quot;count_link&quot;:&quot;/search/count?scope=groups&quot;},&quot;work_items&quot;:{&quot;label&quot;:&quot;Work items&quot;,&quot;scope&quot;:&quot;work_items&quot;,&quot;data&quot;:null,&quot;link&quot;:&quot;/search?scope=work_items&quot;,&quot;active&quot;:false,&quot;count_link&quot;:&quot;/search/count?scope=work_items&quot;},&quot;merge_requests&quot;:{&quot;label&quot;:&quot;Merge requests&quot;,&quot;scope&quot;:&quot;merge_requests&quot;,&quot;data&quot;:null,&quot;link&quot;:&quot;/search?scope=merge_requests&quot;,&quot;active&quot;:false,&quot;count_link&quot;:&quot;/search/count?scope=merge_requests&quot;},&quot;milestones&quot;:{&quot;label&quot;:&quot;Milestones&quot;,&quot;scope&quot;:&quot;milestones&quot;,&quot;data&quot;:null,&quot;link&quot;:&quot;/search?scope=milestones&quot;,&quot;active&quot;:false,&quot;count_link&quot;:&quot;/search/count?scope=milestones&quot;},&quot;users&quot;:{&quot;label&quot;:&quot;Users&quot;,&quot;scope&quot;:&quot;users&quot;,&quot;data&quot;:null,&quot;link&quot;:&quot;/search?scope=users&quot;,&quot;active&quot;:false,&quot;count_link&quot;:&quot;/search/count?scope=users&quot;}}" data-project-initial-json="null" data-search-level="global" data-search-type="basic" data-work-item-types-json="[]" data-zoekt-available="false" id="js-search-sidebar"></div>
+<div class="gl-w-full gl-grow gl-min-w-0">
+<div class="search-results-status gl-items-start gl-justify-between gl-my-4 @sm/panel:gl-flex @lg/panel:gl-hidden">
+<div class="gl-flex gl-gap-3 gl-mt-3 @sm/panel:gl-mt-0">
+<button id="js-open-mobile-filters" class="gl-button btn btn-md btn-default @md/panel:gl-hidden gl-grow @md/panel:gl-grow-0" type="button"><svg class="s16 gl-icon gl-button-icon " data-testid="filter-icon"><use href="/assets/icons-c33971e20f30a791de3ca935bad7098d65eac64b537ff98fed28c2589f917fd9.svg#filter"></use></svg>
+<span class="gl-button-text">
+Filters
+
+</span>
+
+</button></div>
+</div>
+
+<section class="gl-flex gl-empty-state gl-text-center gl-flex-col">
+<div class="gl-max-w-full">
+<img alt="" class="gl-dark-invert-keep-hue" src="/assets/illustrations/empty-state/empty-search-md-e1a55bfad6855c077c982f2f351f56e391af028eb41abe1db670c291d30aece9.svg" />
+</div>
+<div class="gl-empty-state-content gl-mx-auto gl-my-0 gl-m-auto gl-p-5">
+<h1 class="gl-text-size-h-display gl-leading-36 gl-mt-0 gl-mb-0 h4">
+No results found
+</h1>
+<p class="gl-mt-4 gl-mb-0 gl-text-subtle" data-testid="empty-state-description">
+We couldn&#39;t find any projects matching <code></code>
+
+</p>
+</div>
+</section>
+
+
+</div>
+
+</div>
+
+
+</main>
+</div>
+
+
+</div>
+
+
+</div>
+</div>
+<div class="paneled-view-portal" id="contextual-panel-portal"></div>
+</div>
+</div>
+
+</div>
+
+
+<script>
+//<![CDATA[
+if ('loading' in HTMLImageElement.prototype) {
+  document.querySelectorAll('img.lazy').forEach(img => {
+    img.loading = 'lazy';
+    let imgUrl = img.dataset.src;
+    // Only adding width + height for avatars for now
+    // Keep this logic in sync with appendWidthToAvatarUrl in
+    // app/assets/javascripts/vue_shared/components/user_avatar/utils.js
+    if (imgUrl.indexOf('/avatar/') > -1 && !imgUrl.includes('width=')) {
+      const targetWidth = img.getAttribute('width') || img.width;
+      imgUrl += imgUrl.includes('?') ? `&width=${targetWidth}` : `?width=${targetWidth}`;
+    }
+    img.src = imgUrl;
+    img.removeAttribute('data-src');
+    img.classList.remove('lazy');
+    img.classList.add('js-lazy-loaded');
+    img.dataset.testid = 'js-lazy-loaded-content';
+  });
+}
+
+//]]>
+</script>
+<script>
+//<![CDATA[
+gl = window.gl || {};
+gl.experiments = {};
+
+
+//]]>
+</script>
+
+</body>
+</html>
+

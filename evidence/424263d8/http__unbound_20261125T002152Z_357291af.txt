@@ -1,0 +1,16 @@
+REQUEST:
+GET https://meilisearch.baliprov.dev/rest/user/whoami
+User-Agent: pentest-ai/1.6.2 (compatible; rv:a2cfe36ea2c0; +https://pentestai.xyz)
+X-Request-ID: 7a3f9c21-4b08-4e11-9c02-a2cfe36ea2c0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsIjoiYWRtaW5AanVpY2Utc2gub3AiLCJyb2xlIjoiYWRtaW4ifX0.ptai-forged-hs256-confusion-sig
+
+
+
+RESPONSE:
+HTTP 404
+Date: Wed, 25 Nov 2026 00:21:52 GMT
+Transfer-Encoding: chunked
+Connection: keep-alive
+Server: nginx/1.10.3
+Content-Encoding: gzip
+

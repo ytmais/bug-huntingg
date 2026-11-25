@@ -1,0 +1,22 @@
+REQUEST:
+GET https://stirling-pdf.baliprov.dev/internal/session
+User-Agent: pentest-ai/1.6.2 (compatible; rv:a2cfe36ea2c0; +https://pentestai.xyz)
+X-Request-ID: 7a3f9c21-4b08-4e11-9c02-a2cfe36ea2c0
+
+
+
+RESPONSE:
+HTTP 401
+Date: Wed, 25 Nov 2026 00:22:49 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Pragma: no-cache
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Frame-Options: DENY
+Cache-Control: must-revalidate,no-cache,no-store
+Vary: Access-Control-Request-Headers
+
+{"timestamp":"2026-11-25T00:22:49.821Z","status":401,"error":"Unauthorized","message":"Full authentication is required to access this resource","path":"/internal/session"}

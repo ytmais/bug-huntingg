@@ -1,0 +1,18 @@
+REQUEST:
+GET https://stirling-pdf.baliprov.dev/rest/track-order/%26lt%3Bscript%26gt%3Balert%281%29%26lt%3B%2Fscript%26gt%3B
+User-Agent: pentest-ai/1.6.2 (compatible; rv:a2cfe36ea2c0; +https://pentestai.xyz)
+X-Request-ID: 7a3f9c21-4b08-4e11-9c02-a2cfe36ea2c0
+
+
+
+RESPONSE:
+HTTP 400
+Date: Wed, 25 Nov 2026 00:26:21 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Cache-Control: must-revalidate,no-cache,no-store
+Vary: Access-Control-Request-Headers
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{"timestamp":"2026-11-25T00:26:21.829Z","status":400,"error":"Bad Request","message":"Bad Request","path":"/rest/track-order/&lt;script&gt;alert(1)&lt;%2Fscript&gt;"}

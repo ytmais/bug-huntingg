@@ -1,0 +1,21 @@
+REQUEST:
+POST https://gitlab.baliprov.dev/api/BasketItems
+User-Agent: pentest-ai/1.6.2 (compatible; rv:a2cfe36ea2c0; +https://pentestai.xyz)
+X-Request-ID: 7a3f9c21-4b08-4e11-9c02-a2cfe36ea2c0
+Content-Type: application/json
+
+{"email":
+
+RESPONSE:
+HTTP 400
+Server: nginx
+Date: Wed, 25 Nov 2026 00:12:34 GMT
+Content-Type: application/json
+Content-Length: 31
+Connection: keep-alive
+X-Gitlab-Meta: {"correlation_id":"01M880R2W13N8X6Y5AN2T1DMC8","version":"1"}
+X-Request-ID: 01M880R2W13N8X6Y5AN2T1DMC8
+X-Runtime: 0.004931
+Strict-Transport-Security: max-age=63072000
+
+{"error":"Invalid JSON format"}

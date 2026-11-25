@@ -1,0 +1,24 @@
+REQUEST:
+GET https://gitlab.baliprov.dev/snippets
+User-Agent: pentest-ai/1.6.2 (compatible; rv:a2cfe36ea2c0; +https://pentestai.xyz)
+X-Request-ID: 7a3f9c21-4b08-4e11-9c02-a2cfe36ea2c0
+
+
+
+RESPONSE:
+HTTP 301
+Server: nginx
+Date: Wed, 25 Nov 2026 00:12:35 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 104
+Connection: keep-alive
+Cache-Control: no-cache
+Location: https://gitlab.baliprov.dev/-/snippets
+NEL: {"max_age": 0}
+X-Gitlab-Meta: {"correlation_id":"01M880R3W4XEJE7ZRP2M8WFNCC","version":"1"}
+X-Request-ID: 01M880R3W4XEJE7ZRP2M8WFNCC
+X-Runtime: 0.016449
+Strict-Transport-Security: max-age=63072000
+Referrer-Policy: strict-origin-when-cross-origin
+
+<html><body>You are being <a href="https://gitlab.baliprov.dev/-/snippets">redirected</a>.</body></html>

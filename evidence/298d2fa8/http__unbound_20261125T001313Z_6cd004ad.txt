@@ -1,0 +1,20 @@
+REQUEST:
+GET https://gitlab.baliprov.dev/download?file=..%5C..%5C..%5Cwindows%5Cwin.ini
+User-Agent: pentest-ai/1.6.2 (compatible; rv:a2cfe36ea2c0; +https://pentestai.xyz)
+X-Request-ID: 7a3f9c21-4b08-4e11-9c02-a2cfe36ea2c0
+
+
+
+RESPONSE:
+HTTP 400
+Server: nginx
+Date: Wed, 25 Nov 2026 00:13:13 GMT
+Content-Type: text/plain
+Content-Length: 112
+Connection: keep-alive
+X-Gitlab-Meta: {"correlation_id":"01M880S8M6C0C8VF9S7XRZPF6P","version":"1"}
+X-Request-ID: 01M880S8M6C0C8VF9S7XRZPF6P
+X-Runtime: 0.005708
+Strict-Transport-Security: max-age=63072000
+
+Potential path traversal attempt detected. Feedback issue: https://gitlab.com/gitlab-org/gitlab/-/issues/520714.

@@ -1,0 +1,36 @@
+REQUEST:
+GET https://sso.baliprov.dev/?message=ptaicanary
+User-Agent: pentest-ai/1.6.2 (compatible; rv:a2cfe36ea2c0; +https://pentestai.xyz)
+X-Request-ID: 7a3f9c21-4b08-4e11-9c02-a2cfe36ea2c0
+
+
+
+RESPONSE:
+HTTP 302
+Date: Tue, 24 Nov 2026 23:52:24 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Cache-Control: no-cache, private
+Location: https://sso.baliprov.dev/login
+Set-Cookie: sso_session=eyJpdiI6Im5kc0tzUE1YWkdVSzI3K1VmSXlCb0E9PSIsInZhbHVlIjoiUmg3VnhqTXVqL2Y4UkN2RWFFSkVjNW94QUJ1OFA3Q2FLS2wwQUR1U0w4SUw3QXhWNGxaWWhXTnVpYlFkOU1TT1dJVEE3V2dtd295Tnk3R0lBSElQc0p0YU9yM1krZDZUbThjbEoxZWo3UlJoRk5PM24vbzBqKzlYT0tNN2JGQlEiLCJtYWMiOiJhYWYzM2M3NThkZTViZmJmMzRiNzdkM2FkZmI3YWYxMWI0ZjhlOTUwNTk3OTgxZjgzYmI3MzE5N2M5YWU2YWVhIiwidGFnIjoiIn0%3D; path=/; domain=sso.baliprov.dev; secure; httponly
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+Content-Security-Policy: upgrade-insecure-requests; default-src 'self' https: data: blob:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: https://cdn.datatables.net https://cdnjs.cloudflare.com https://fonts.googleapis.com https://stackpath.bootstrapcdn.com 'unsafe-inline'; style-src-elem 'self' https: https://cdn.datatables.net https://cdnjs.cloudflare.com https://fonts.googleapis.com https://stackpath.bootstrapcdn.com 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https: data: https://fonts.gstatic.com; connect-src 'self' https:; object-src 'none'; frame-ancestors 'self'; base-uri 'self';
+Referrer-Policy: no-referrer
+Permissions-Policy: camera=(self)
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="refresh" content="0;url='https://sso.baliprov.dev/login'" />
+
+        <title>Redirecting to https://sso.baliprov.dev/login</title>
+    </head>
+    <body>
+        Redirecting to <a href="https://sso.baliprov.dev/login">https://sso.baliprov.dev/login</a>.
+    </body>
+</html>

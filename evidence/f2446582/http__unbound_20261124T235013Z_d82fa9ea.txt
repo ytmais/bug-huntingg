@@ -1,0 +1,1003 @@
+REQUEST:
+GET https://sso.baliprov.dev/login?email=%5B%24where%5D%3Dsleep%285000%29
+User-Agent: pentest-ai/1.6.2 (compatible; rv:a2cfe36ea2c0; +https://pentestai.xyz)
+X-Request-ID: 7a3f9c21-4b08-4e11-9c02-a2cfe36ea2c0
+
+
+
+RESPONSE:
+HTTP 200
+Date: Tue, 24 Nov 2026 23:50:13 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Cache-Control: no-cache, private
+Set-Cookie: sso_session=eyJpdiI6InAxbThYMlRNamxmK2dKTlVCekhEOFE9PSIsInZhbHVlIjoic24veEx4YUY4OXBWL0RUSGFwRHlWcGh4UDFOWDdRTkN6Vk9GZDhvaDBGSGVyN1hORTE2cFVHS3dLWHRCT1poand2dm1ZODVmWVA1M0RQaEFLalBQWDg2a3FoU3loL1ZHSG5UY1Uvd3B3U3RYdnJ5V3Z0cjh5ZmRXeGdHZUJlU2wiLCJtYWMiOiI4MTI0ZWYzYTJiNWU1NTBhNjgwYjM2ZmRkYzM0ZmRkMDE4NTUyYzUzNDg1ODgyNDVhNzI0OTRlMzY5NDAzZWUyIiwidGFnIjoiIn0%3D; path=/; domain=sso.baliprov.dev; secure; httponly
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+Content-Security-Policy: upgrade-insecure-requests; default-src 'self' https: data: blob:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: https://cdn.datatables.net https://cdnjs.cloudflare.com https://fonts.googleapis.com https://stackpath.bootstrapcdn.com 'unsafe-inline'; style-src-elem 'self' https: https://cdn.datatables.net https://cdnjs.cloudflare.com https://fonts.googleapis.com https://stackpath.bootstrapcdn.com 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https: data: https://fonts.gstatic.com; connect-src 'self' https:; object-src 'none'; frame-ancestors 'self'; base-uri 'self';
+Referrer-Policy: no-referrer
+Permissions-Policy: camera=(self)
+Content-Encoding: gzip
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>SSO</title>
+
+	<link rel="stylesheet" href="https://sso.baliprov.dev/vendors/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://sso.baliprov.dev/vendors/fontawesome-free/css/all.min.css">
+	<link rel="stylesheet" href="https://sso.baliprov.dev/vendors/jquery-ui/jquery-ui.min.css">
+
+	<link rel="stylesheet" href="https://sso.baliprov.dev/vendors/sso_v3/css/spbe3.css">
+	<link rel="shortcut icon" href="https://sso.baliprov.dev/assets/backend/noble-ui/images/logo.svg" />
+	<link href="https://sso.baliprov.dev/vendors/sweetalert/sweetalert.css" rel="stylesheet" type="text/css" />
+	<style>
+		/* Enhanced error message styling */
+		#msg-challenge-error {
+			border-radius: 12px !important;
+			background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%) !important;
+			border: none !important;
+			color: white !important;
+			font-weight: 500 !important;
+			padding: 12px 16px !important;
+			box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3) !important;
+		}
+
+		#msg-challenge-error i {
+			color: #fff !important;
+		}
+
+		/* Shake animation */
+		@keyframes headShake {
+			0% { transform: translateX(0); }
+			6.5% { transform: translateX(-6px) rotateY(-9deg); }
+			18.5% { transform: translateX(5px) rotateY(7deg); }
+			31.5% { transform: translateX(-3px) rotateY(-5deg); }
+			43.5% { transform: translateX(2px) rotateY(3deg); }
+			50% { transform: translateX(0); }
+		}
+
+		.animate__animated {
+			animation-duration: 1s;
+			animation-fill-mode: both;
+		}
+
+		.animate__headShake {
+			animation-name: headShake;
+		}
+
+		/* Carousel Smooth Transitions */
+		#carousel-container {
+			background-size: cover !important;
+			background-position: center !important;
+			transition: background-image 1s ease-in-out, background-color 1s ease-in-out !important;
+		}
+
+		#carousel-title {
+			opacity: 1;
+			transform: translateY(0);
+			transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1) !important;
+		}
+
+		#carousel-desc {
+			opacity: 1;
+			transform: translateY(0);
+			transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1) !important;
+		}
+
+		#carousel-title.fade-out {
+			opacity: 0;
+			transform: translateY(-10px);
+			transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+		}
+
+		#carousel-desc.fade-out {
+			opacity: 0;
+			transform: translateY(10px);
+			transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+		}
+
+		.carousel-theme-nav {
+			transition: color 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
+		}
+
+		.carousel-indicator {
+			transition: width 0.8s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
+		}
+
+		.carousel-nav-btn {
+			transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+		}
+
+		.carousel-nav-btn:active {
+			transform: scale(0.92) !important;
+		}
+
+		/* Loading state improvements */
+		.spinner-border-sm {
+			width: 1rem;
+			height: 1rem;
+			border-width: 0.15em;
+		}
+
+		/* Form control improvements */
+		.form-control-lg {
+			height: 38px;
+			border-radius: 8px;
+			font-size: 14px;
+		}
+
+		.form-control-lg:focus {
+			border-color: #80bdff;
+			box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+		}
+
+		.form-label, label.font-weight-500 {
+			color: #1E1E1E;
+			font-size: 14px;
+			font-weight: 500;
+			margin-bottom: 0.5rem;
+		}
+
+		/* Custom utility classes */
+		.gap-2 {
+			gap: 0.5rem !important;
+		}
+
+		.gap-3 {
+			gap: 1rem !important;
+		}
+
+		.text-link {
+			color: #1E1E1E !important;
+			text-decoration: underline !important;
+		}
+
+		.text-link:hover {
+			color: #0056b3 !important;
+		}
+
+		/* Input group improvements */
+		.input-group-text {
+			background-color: transparent;
+			border: none;
+			padding-right: 0;
+		}
+
+		.input-group-text a {
+			cursor: pointer;
+			text-decoration: none;
+		}
+
+		/* ConnectIDN button styling */
+		.btn-connect-idn {
+			background-color: #294175 !important;
+			color: white !important;
+			border-color: #294175 !important;
+		}
+
+		.btn-connect-idn:hover {
+			background-color: #203354 !important;
+			color: white !important;
+			border-color: #203354 !important;
+		}
+
+		/* Carousel styling */
+		.carousel-theme-nav {
+			cursor: pointer;
+		}
+
+		.carousel-theme-nav.active {
+			color: var(--Text-Default-Default, #F3F3F3) !important;
+			opacity: 1 !important;
+		}
+
+		.carousel-theme-nav:hover {
+			opacity: 1 !important;
+		}
+
+		.carousel-nav-btn {
+			cursor: pointer;
+			opacity: 0.7;
+		}
+
+		.carousel-nav-btn:hover {
+			opacity: 1;
+		}
+
+		#carousel-progress-bar {
+			transition: width 0.3s ease;
+		}
+
+		.absolute-bottom {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			left: 0;
+		}
+
+		/* if mobile layout .absolute-bottom */
+		@media (max-width: 768px) {
+			.absolute-bottom {
+				position: unset;
+			}
+		}
+
+		/* Hardware acceleration for smoother animations */
+		#carousel-container,
+		#carousel-title,
+		#carousel-desc,
+		.carousel-theme-nav,
+		.carousel-indicator,
+		.carousel-nav-btn {
+			will-change: auto;
+		}
+
+		#carousel-container:hover,
+		.carousel-nav-btn:hover {
+			will-change: opacity, background-image;
+		}
+	</style>
+	
+	
+</head>
+<body>
+	<input id="pending" type="hidden" name="" value="">
+	<div style="width: 100%; min-height: 100vh; background: var(--Background-Default-Default, white); overflow: hidden">
+  <div style="width: 100%; min-height: 100vh; left: 0px; top: 0px; position: absolute; justify-content: center; align-items: center; display: inline-flex">
+	
+    <div class="d-none d-sm-none d-md-none d-lg-flex" style="flex: 1 1 0; align-self: stretch; padding: 16px; justify-content: center; align-items: center; display: inline-flex; position: relative;">
+      <div id="carousel-container" style="flex: 1 1 0; align-self: stretch; padding: 24px; background-image: url('https://sso.baliprov.dev/assets/carousel/Wana.webp'); overflow: hidden; border-radius: 16px; background-size: cover; background-position: center; flex-direction: column; justify-content: space-between; align-items: flex-start; display: inline-flex; position: relative; z-index: 2;">
+		<div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.3) 100%); border-radius: 16px; pointer-events: none; z-index: 1;"></div>
+        <div style="justify-content: flex-start; align-items: flex-end; gap: 24px; display: inline-flex;z-index: 2;">
+          <div class="carousel-theme-nav active" data-theme-index="0" data-theme-title="Wana Kerti" data-theme-desc="Menjaga keselarasan alam dengan penuh kebijaksanaan dan kehati-hatian" style="color: var(--Text-Default-Default, #F3F3F3); font-size: 14px; font-family: Geist; font-weight: 400; line-height: 19.60px; word-wrap: break-word">Wana</div>
+          <div class="carousel-theme-nav" data-theme-index="1" data-theme-title="Atma Kerti" data-theme-desc="Membangun jiwa yang kuat dan bermakna dalam setiap tindakan" style="color: var(--Text-Default-Secondary, #B2B2B2); font-size: 14px; font-family: Geist; font-weight: 400; line-height: 19.60px; word-wrap: break-word; opacity: 0.6;">Atma</div>
+          <div class="carousel-theme-nav" data-theme-index="2" data-theme-title="Danu Kerti" data-theme-desc="Mengalirkan berkah dan kemakmuran bagi seluruh rakyat" style="color: var(--Text-Default-Secondary, #B2B2B2); font-size: 14px; font-family: Geist; font-weight: 400; line-height: 19.60px; word-wrap: break-word; opacity: 0.6;">Danu</div>
+          <div class="carousel-theme-nav" data-theme-index="3" data-theme-title="Segara Kerti" data-theme-desc="Menjaga keselarasan laut dan sumber-sumber alam yang terkandung di dalamnya" style="color: var(--Text-Default-Secondary, #B2B2B2); font-size: 14px; font-family: Geist; font-weight: 400; line-height: 19.60px; word-wrap: break-word; opacity: 0.6;">Segara</div>
+          <div class="carousel-theme-nav" data-theme-index="4" data-theme-title="Jana Kerti" data-theme-desc="Menggerakkan persatuan dan gotong royong dalam membangun masa depan" style="color: var(--Text-Default-Secondary, #B2B2B2); font-size: 14px; font-family: Geist; font-weight: 400; line-height: 19.60px; word-wrap: break-word; opacity: 0.6;">Jana</div>
+          <div class="carousel-theme-nav" data-theme-index="5" data-theme-title="Jagat Kerti" data-theme-desc="Menjaga kelestarian dunia untuk generasi masa depan" style="color: var(--Text-Default-Secondary, #B2B2B2); font-size: 14px; font-family: Geist; font-weight: 400; line-height: 19.60px; word-wrap: break-word; opacity: 0.6;">Jagat</div>
+        </div>
+        <div style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 12px; display: flex;z-index: 2;">
+          <div style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 12px; display: flex">
+            <div id="carousel-title" style="width: 100%; max-width: 624px; color: var(--Text-Default-Default, #F3F3F3); font-size: 30px; font-family: Geist; font-weight: 500; line-height: 36px; word-wrap: break-word">Wana Kerti</div>
+            <div id="carousel-desc" style="width: 506px; color: var(--Text-Default-Default, #F3F3F3); font-size: 20px; font-family: Geist; font-weight: 400; line-height: 30px; word-wrap: break-word">Menjaga keselarasan alam dengan penuh kebijaksanaan dan kehati-hatian</div>
+          </div>
+          <div style="align-self: stretch; justify-content: space-between; align-items: center; display: inline-flex">
+            <div style="justify-content: flex-start; align-items: center; gap: 6px; display: flex" id="carousel-indicators">
+              <div class="carousel-indicator" data-index="0" style="width: 96px; height: 4px; background: var(--Background-Neutral-White, white); border-radius: 999px">
+			  </div>
+              <div class="carousel-indicator" data-index="1" style="width: 4px; height: 4px; opacity: 0.30; background: var(--Background-Neutral-White, white); border-radius: 999px"></div>
+              <div class="carousel-indicator" data-index="2" style="width: 4px; height: 4px; opacity: 0.30; background: var(--Background-Neutral-White, white); border-radius: 999px"></div>
+              <div class="carousel-indicator" data-index="3" style="width: 4px; height: 4px; opacity: 0.30; background: var(--Background-Neutral-White, white); border-radius: 999px"></div>
+              <div class="carousel-indicator" data-index="4" style="width: 4px; height: 4px; opacity: 0.30; background: var(--Background-Neutral-White, white); border-radius: 999px"></div>
+              <div class="carousel-indicator" data-index="5" style="width: 4px; height: 4px; opacity: 0.30; background: var(--Background-Neutral-White, white); border-radius: 999px"></div>
+            </div>
+            <div style="justify-content: flex-start; align-items: center; gap: 8px; display: flex">
+              <div class="carousel-nav-btn" id="carousel-prev" data-direction="prev" style="padding: 8px; background: rgba(255, 255, 255, 0.02); overflow: hidden; border-radius: 9999px; justify-content: center; align-items: center; display: flex">
+                <div data-size="20" style="width: 20px; height: 20px; position: relative; overflow: hidden">
+					<i class="fa fa-chevron-left" aria-hidden="true" style="color: var(--Icon-Default-Default, white); font-size: 14px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%)"></i>
+                </div>
+              </div>
+              <div class="carousel-nav-btn" id="carousel-next" data-direction="next" style="padding: 8px; background: rgba(255, 255, 255, 0.02); overflow: hidden; border-radius: 9999px; justify-content: center; align-items: center; display: flex">
+                <div data-size="20" style="width: 20px; height: 20px; position: relative; overflow: hidden">
+					<i class="fa fa-chevron-right" aria-hidden="true" style="color: var(--Icon-Default-Default, white); font-size: 14px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%)"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="flex: 1 1 0; align-self: stretch; flex-direction: column; justify-content: center; align-items: flex-start; gap: 10px; display: inline-flex">
+      <input type="hidden" name="" id="theme-now" value="0">
+      <div style="align-self: stretch; flex: 1 1 0; padding-top: 32px; flex-direction: column; justify-content: space-between; align-items: center; gap: 24px; display: flex; max-height: 100vh;  overflow-y: auto;" class="position-relative">
+        <div class="p-4 p-md-5" style="width: 100%; max-width: 720px; border-radius: 8px; flex-direction: column; justify-content: center; align-items: center; gap: 40px; display: flex;">
+          <div style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: flex">
+            <div style="padding: 8px; background: var(--Background-Default-Secondary, #F5F5F5); border-radius: 6px; justify-content: flex-start; align-items: center; gap: 10px; display: inline-flex; padding-bottom: 12px;">
+              <div style="width: 32px; height: 32px; position: relative">
+                <div style="width: 31.86px; height: 31.85px; left: 0px; top: 0px; position: absolute; )">
+					<img src="https://sso.baliprov.dev/assets/backend/noble-ui/images/logo.svg" alt="Logo" class="img-fluid" style="width: 100%; height: 100%; object-fit: contain;" />
+				</div>
+              </div>
+            </div>
+            <div style="color: var(--Text-Default-Default, #1E1E1E); font-size: 30px; font-family: Geist; font-weight: 500; line-height: 36px; word-wrap: break-word">Single Sign On</div>
+            <div style="max-width: 480px; height: 22px; color: var(--Text-Default-Secondary, #757575); font-size: 16px; font-family: Geist; font-weight: 400; line-height: 24px; word-wrap: break-word">Pemerintah Provinsi Bali</div>
+          </div>
+          <div style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 24px; display: flex">
+                       <form method="POST" action="https://sso.baliprov.dev/auth" id="demo-form" onsubmit="return encryptLogin(event)" class="w-100">
+              <input type="hidden" name="_token" value="ujcmKHkp4NqgxjNNkxyyoyKsq0US0VgPLfLYhgyG" autocomplete="off">              <div class="row">
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <label for="username" class="font-weight-500">Username/Email</label>
+                    <input type="text" id="username" name="username_field" class="form-control form-control-lg" placeholder="Masukan username/email Anda" value="" tabindex="1">
+                    <input type="hidden" id="username_encrypt" name="username" />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <label for="password" class="font-weight-500">Password</label>
+                      <a href="#" data-toggle="modal" data-target="#resetPasswordModal" class="text-link font-weight-500" style="font-size: 14px" onclick="event.preventDefault()">Lupa password?</a>
+                    </div>
+                    <div class="input-group mb-3" id="show_hide_password">
+                      <input type="password" id="password" name="password_field" class="form-control form-control-lg" placeholder="Masukan password Anda" tabindex="2">
+                      <div class="input-group-append">
+                        <span class="input-group-text" style="cursor: pointer; border: 1px solid #e0e0e0; border-left: none; border-radius: 0 8px 8px 0; padding: 0.375rem 0.75rem;">
+                          <a href="#" class="text-dark" title="Tampilkan password" style="text-decoration: none;">
+                            <i class="fa fa-eye-slash" aria-hidden="true"></i>
+                          </a>
+                        </span>
+                      </div>
+                    </div>
+                    <input type="hidden" id="password_encrypt" name="password" />
+                  </div>
+                </div>
+              </div>
+              
+
+			  					<div class="row">
+					<div class="col-12 col-lg-7">
+						<input type="text" class="form-control form-control-lg" id="captcha" name="captcha" placeholder="Masukan captcha disini" autocomplete="new-password" tabindex="3">
+					</div>
+					<div class="col-8 col-lg-5 d-flex mt-2 mt-lg-0">
+					<div class="w-100 bg-light d-flex justify-content-center align-items-center" style="border-radius: 4px;">
+						<img id="captcha-img" src="" style="height: auto; width: auto; max-width: 100%;">
+					</div>
+					<a href="#" onclick="event.preventDefault(); refresh()" class="btn btn-sm btn-link text-dark ml-2" title="Refresh captcha">
+						<i class="fas fa-sync-alt"></i>
+					</a>
+					</div>
+				</div>
+				
+              <div class="row mt-4">
+                <div class="col-lg-12">
+                  <button type="submit" class="btn btn-dark btn-md btn-block" tabindex="4">
+                    <i class="fas fa-sign-in-alt mr-2"></i> Login
+                  </button>
+                </div>
+              </div>
+            </form>
+              <div id="msg-challenge-error" class="alert alert-danger d-none text-left" style="font-size:0.88rem;"></div>
+              <div class="d-flex justify-content-center align-items-center w-100" style="margin-top: 16px; margin-bottom: 10px;">
+                <div style="flex: 1; height: 1px; background-color: #E0E0E0;"></div>
+                <div style="padding: 0 16px; color: #999; font-size: 14px;">atau login dengan</div>
+                <div style="flex: 1; height: 1px; background-color: #E0E0E0;"></div>
+              </div>
+              <div class="d-flex flex-column align-items-center w-100">
+                <!-- Passkey & ConnectIDN Buttons -->
+                <div class="d-flex gap-2 justify-content-center mb-3">
+                                      <a href="https://sso.baliprov.dev/auth/connectidn" class="btn btn-outline-light btn-md border" style="min-width: 160px; border-radius: 24px;color: black;" id="connectIDMbtn">
+                     <img src="https://sso.baliprov.dev/assets/icon/finger.svg" alt="ConnectIDN Logo" class="img-fluid" style="width: 20px; height: 20px;"> ConnectIDN
+                    </a>
+                                    <button id="btn-passkey-direct" class="btn btn-outline-light btn-md border" style="min-width: 160px; border-radius: 24px; color: black;">
+                   <img src="https://sso.baliprov.dev/assets/icon/face.svg" alt="Passkey Logo" class="img-fluid" style="width: 20px; height: 20px;"> Passkey
+                  </button>
+                </div>
+
+                <!-- Social Login Buttons -->
+                <div class="d-flex justify-content-center gap-3">
+                  <a href="https://sso.baliprov.dev/auth/facebook" class="btn btn-outline-light border rounded-circle " title="Login dengan Facebook">
+                    <i class="fab fa-facebook-f text-primary fa-1x"></i>
+                  </a>
+                  <a href="https://sso.baliprov.dev/auth/google" class="btn btn-outline-light border rounded-circle" title="Login dengan Google">
+                    <i class="fab fa-google text-danger fa-1x"></i>
+                  </a>
+                  <a href="https://sso.baliprov.dev/auth/apple" class="btn btn-outline-light border rounded-circle" title="Login dengan Apple">
+                    <i class="fab fa-apple text-dark fa-1x"></i>
+                  </a>
+                </div>
+              </div>
+          </div>
+        </div>
+		<div style="align-self: stretch; padding: 16px; justify-content: space-between; align-items: center; display: inline-flex" class="">
+			<div style="justify-content: center; display: flex; flex-direction: column; color: var(--Text-Default-Secondary, #757575); font-size: 14px; font-family: Geist; font-weight: 400; line-height: 18px; word-wrap: break-word">© 2026 Pemerintah Provinsi Bali | UPTD. PELITA</div>
+			<a href="https://pse.layanan.go.id/sealid/2194" target="_blank"><img src="https://sso.baliprov.dev/images/badge_2194.png" class="img-fluid" style="max-width: 130px;" /></a>
+		</div>
+      </div>
+     
+    </div>
+  </div>
+
+		<div class="modal fade" id="resetPasswordModal" tabindex="-1" role="dialog" aria-labelledby="resetPasswordModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="resetPasswordModalLabel" style="color:#000">Lupa Password</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<form method="POST" id="forgotPasswordForm" action="https://sso.baliprov.dev/forgot-password">
+					<div class="modal-body">
+						<div class="col-md-12">
+							<input type="hidden" name="_token" value="ujcmKHkp4NqgxjNNkxyyoyKsq0US0VgPLfLYhgyG" autocomplete="off">							<div class="form-group">
+								<label for="forgot-email" style="color: #000; font-weight: 500;">Email</label>
+								<input type="email" name="email" id="forgot-email" class="form-control form-control-lg" required="required" placeholder="Masukkan Email Anda">
+							</div>
+
+							<!-- captcha forgot password -->
+														<div class="row">
+								<div class="col-12 col-lg-7">
+									<input type="text" class="form-control form-control-lg" id="forgot-pass-captcha" name="captcha_forgot_password" placeholder="Masukan captcha disini" autocomplete="new-password" tabindex="3">
+								</div>
+								<div class="col-8 col-lg-5 d-flex mt-2 mt-lg-0">
+								<div class="w-100 bg-light d-flex justify-content-center align-items-center" style="border-radius: 4px;">
+									<img id="forgot-pass-captcha-img" src="https://sso.baliprov.dev/captcha/2045221762/forgot_password" style="height: auto; width: auto; max-width: 100%;">
+								</div>
+								<a href="#" onclick="event.preventDefault(); refreshForgotPassCaptcha()" class="btn btn-sm btn-link text-dark ml-2" title="Refresh captcha">
+									<i class="fas fa-sync-alt"></i>
+								</a>
+								</div>
+							</div>
+														<div id="panel-form-forgot"></div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+						<button type="submit" class="btn btn-danger" id="submitForgotPasswordBtn">
+							<i class="fas fa-envelope mr-2"></i> Kirim Email
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div class="modal fade" id="forgotPasswordSuccessModal" tabindex="-1" role="dialog" aria-labelledby="forgotPasswordSuccessModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-body text-center">
+					<div style="font-size: 48px; margin-bottom: 16px;" class="text-success">
+						<i class="fas fa-check-circle"></i>
+					</div>
+					<h5 style="color: #000; font-weight: 600; margin-bottom: 12px;">Email Verifikasi Terkirim</h5>
+					<p style="color: #666; margin-bottom: 8px;" id="successEmailMessage">Kami telah mengirimkan tautan reset password ke email Anda.</p>
+					<p style="color: #999; font-size: 14px; margin-bottom: 16px;">Cek folder spam jika tidak melihat email.</p>
+					
+					<!-- Countdown Timer -->
+					<div class="alert alert-info mb-2" style="color: #155724;">
+						<span id="resendCountdown" style="font-weight: 600;">Tunggu 60 detik sebelum mengirim ulang</span>
+					</div>
+					<button type="button" class="btn btn-primary w-100 mb-2" id="resendEmailBtn" disabled>
+						<i class="fas fa-redo mr-2"></i> Kirim Ulang Email
+					</button>
+					<button type="button" class="btn btn-outline-secondary w-100" data-dismiss="modal" id="backToLoginBtn">
+						</i> Tutup
+					</button>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+	
+	<script src="https://sso.baliprov.dev/js/custom/jquery1.14.2/jquery.js"></script>
+	<script src="https://sso.baliprov.dev/vendors/popper/popper.min.js"></script>
+	<script src="https://sso.baliprov.dev/vendors/bootstrap/js/bootstrap.min.js"></script>
+	<script src="https://sso.baliprov.dev/vendors/sweetalert2/sweetalert2.min.js"></script>
+	<script src="https://sso.baliprov.dev/js/custom/jquery1.14.2/jquery-ui.min.js"></script>
+	<script src="https://sso.baliprov.dev/js/cryptojs-aes.min.js"></script>
+	<script src="https://sso.baliprov.dev/js/cryptojs-aes-format.js"></script>
+	<script src="https://sso.baliprov.dev/vendors/sweetalert/sweetalert.min.js"></script>
+	<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+	<script src="https://sso.baliprov.dev/custom/js/jsencrypt.min.js"></script>
+	<script src="https://sso.baliprov.dev/vendor/webauthn/webauthn.js"></script>
+	<script>
+
+		// -------------------------------------------------------
+		// Carousel Functionality Variables & Functions
+		// -------------------------------------------------------
+		let currentCarouselIndex = 0;
+		const totalSlides = 6;
+		let carouselTimer;
+
+		function updateCarouselDisplay(index) {
+			// Fade out text content with staggered animation
+			$('#carousel-title').addClass('fade-out');
+			
+			setTimeout(() => {
+				$('#carousel-desc').addClass('fade-out');
+			}, 80);
+
+			// Update content after fade out completes
+			setTimeout(() => {
+				// Update text content
+				const $themeNav = $('.carousel-theme-nav');
+				const $activeTheme = $themeNav.eq(index);
+				const title = $activeTheme.data('theme-title');
+				const desc = $activeTheme.data('theme-desc');
+
+				$('#carousel-title').text(title);
+				$('#carousel-desc').text(desc);
+
+				// Update carousel background image based on theme with smooth transition
+				const themeNames = ['Wana', 'Atma', 'Danu', 'Segara', 'Jana', 'Jagat'];
+				const selectedTheme = themeNames[index];
+				const imageUrl = `https://sso.baliprov.dev/assets/carousel/${selectedTheme}.webp`;
+				$('#carousel-container').css('background-image', `url(${imageUrl})`);
+
+				// Update theme navigation styling with smooth transitions
+				$themeNav.each(function(i) {
+					if (i === index) {
+						$(this).removeClass('active').addClass('active');
+						$(this).css({
+							'color': 'var(--Text-Default-Default, #F3F3F3)',
+							'opacity': '1'
+						});
+					} else {
+						$(this).removeClass('active');
+						$(this).css({
+							'color': 'var(--Text-Default-Secondary, #B2B2B2)',
+							'opacity': '0.6'
+						});
+					}
+				});
+
+				// Update progress indicators with staggered animation
+				$('.carousel-indicator').each(function(i) {
+					const indicatorIndex = $(this).data('index');
+					const $indicator = $(this);
+					
+					setTimeout(() => {
+						if (indicatorIndex === index) {
+							$indicator.css('width', '96px').css('opacity', '1');
+						} else {
+							$indicator.css('width', '4px').css('opacity', '0.30');
+						}
+					}, i * 30);
+				});
+
+				// Fade in text content with staggered animation
+				$('#carousel-title').removeClass('fade-out');
+				
+				setTimeout(() => {
+					$('#carousel-desc').removeClass('fade-out');
+				}, 100);
+
+				// Store current index
+				currentCarouselIndex = index;
+			}, 420);
+		}
+
+		function nextSlide() {
+			const nextIndex = (currentCarouselIndex + 1) % totalSlides;
+			updateCarouselDisplay(nextIndex);
+			resetCarouselTimer();
+		}
+
+		function prevSlide() {
+			const prevIndex = (currentCarouselIndex - 1 + totalSlides) % totalSlides;
+			updateCarouselDisplay(prevIndex);
+			resetCarouselTimer();
+		}
+
+		function resetCarouselTimer() {
+			clearInterval(carouselTimer);
+			carouselTimer = setInterval(nextSlide, 5000);
+		}
+
+		// Initialize all carousel functionality when DOM is ready
+		$(document).ready(function() {
+			// Setup carousel initial state
+			updateCarouselDisplay(0);
+			carouselTimer = setInterval(nextSlide, 5000);
+
+			// Carousel theme navigation click handlers
+			$('.carousel-theme-nav').on('click', function() {
+				const themeIndex = $(this).data('theme-index');
+				updateCarouselDisplay(themeIndex);
+				resetCarouselTimer();
+			});
+
+			// Carousel navigation button handlers with visual feedback
+			$('#carousel-next').on('click', function() {
+				$(this).css('opacity', '0.5');
+				nextSlide();
+				setTimeout(() => {
+					$(this).css('opacity', '0.7');
+				}, 150);
+			});
+
+			$('#carousel-prev').on('click', function() {
+				$(this).css('opacity', '0.5');
+				prevSlide();
+				setTimeout(() => {
+					$(this).css('opacity', '0.7');
+				}, 150);
+			});
+		});
+
+	</script>
+
+		<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+	<script src="https://sso.baliprov.dev/vendor/webauthn/webauthn.js"></script>
+
+	<script src="https://sso.baliprov.dev/custom/js/encryptAuth.js"></script>
+	<!-- <script type="text/javascript">
+		var recaptcha_site_key = "6LcVI1UnAAAAAEGVtfXODbulxHwJafORxEBXhDIy";
+		var onloadCallback = function () {
+
+			grecaptcha.render('panel-form-forgot', {
+				'sitekey': recaptcha_site_key
+			});
+		};
+	</script> -->
+	<script>
+
+					$(document).ready(function () {
+				$('#announcement').modal('show');
+			});
+		
+		
+		
+		
+		
+		function refresh(e) {
+			$("#captcha-img").attr('src', '/captcha/' + Math.random()+'/'+'login');
+		}
+
+		function refreshForgotPassCaptcha(e) {
+			$("#forgot-pass-captcha-img").attr('src', '/captcha/' + Math.random()+'/'+'forgot_pass');
+		}
+
+		$(document).ready(function () {
+			$("#captcha-img").attr('src', '/captcha/' + Math.random()+'/'+'login');
+
+			// -------------------------------------------------------
+			// Show/Hide Password Toggle
+			// -------------------------------------------------------
+			$('#show_hide_password a').on('click', function(event) {
+				event.preventDefault();
+				const passwordInput = $('#password');
+				const eyeIcon = $(this).find('i');
+
+				if (passwordInput.attr('type') === 'password') {
+					// Show password
+					passwordInput.attr('type', 'text');
+					eyeIcon.removeClass('fa-eye-slash').addClass('fa-eye');
+					$(this).attr('title', 'Sembunyikan password');
+				} else {
+					// Hide password
+					passwordInput.attr('type', 'password');
+					eyeIcon.removeClass('fa-eye').addClass('fa-eye-slash');
+					$(this).attr('title', 'Tampilkan password');
+				}
+			});
+		});
+
+	</script>
+
+	<script>
+
+		// -------------------------------------------------------
+		// Fungsi helper untuk reset tombol passkey
+		// -------------------------------------------------------
+		function resetPasskeyButton() {
+			$('#btn-passkey-direct').prop('disabled', false).html('<i class="fas fa-key pr-2"></i> Login dengan Passkey');
+		}
+
+		// -------------------------------------------------------
+		// Fungsi untuk mengubah error teknis menjadi pesan ramah user
+		// -------------------------------------------------------
+		function getUserFriendlyError(errorName, errorMessage) {
+			const errorMessages = {
+				'NotAllowedError': 'Operasi dibatalkan atau tidak diizinkan. Pastikan Anda menyentuh sensor atau memasukkan PIN/biometrik dengan benar.',
+				'InvalidStateError': 'Perangkat keamanan sudah terdaftar atau terjadi konflik. Silakan coba lagi.',
+				'NotSupportedError': 'Browser atau perangkat Anda tidak mendukung fitur keamanan ini.',
+				'SecurityError': 'Terjadi masalah keamanan. Pastikan Anda menggunakan koneksi HTTPS yang aman.',
+				'UnknownError': 'Terjadi kesalahan yang tidak diketahui. Silakan coba lagi.',
+				'AbortError': 'Operasi dibatalkan. Silakan coba lagi.',
+				'ConstraintError': 'Perangkat keamanan tidak memenuhi persyaratan yang diperlukan.',
+				'DataError': 'Data tidak valid. Silakan coba lagi.',
+				'NetworkError': 'Terjadi masalah jaringan. Periksa koneksi internet Anda.',
+				'TimeoutError': 'Operasi timeout. Silakan coba lagi dan pastikan menyentuh perangkat keamanan dalam waktu yang tepat.',
+				'EncodingError': 'Terjadi kesalahan dalam memproses data. Silakan coba lagi.',
+				'OperationError': 'Operasi gagal. Pastikan perangkat keamanan Anda berfungsi dengan baik.'
+			};
+
+			// Jika error name dikenali, gunakan pesan ramah
+			if (errorMessages[errorName]) {
+				return errorMessages[errorName];
+			}
+
+			// Untuk error yang mengandung kata kunci tertentu
+			const lowerMessage = errorMessage.toLowerCase();
+			if (lowerMessage.includes('timeout') || lowerMessage.includes('timed out')) {
+				return 'Waktu habis. Silakan coba lagi dan pastikan menyentuh perangkat keamanan Anda dalam 60 detik.';
+			}
+			if (lowerMessage.includes('not allowed') || lowerMessage.includes('cancelled')) {
+				return 'Operasi dibatalkan. Silakan coba lagi dan ikuti instruksi pada perangkat keamanan Anda.';
+			}
+			if (lowerMessage.includes('not supported')) {
+				return 'Browser atau perangkat Anda tidak mendukung login dengan passkey.';
+			}
+
+			// Default fallback dengan pesan yang lebih ramah
+			return 'Terjadi kesalahan saat login dengan passkey. Silakan coba lagi atau gunakan metode login lainnya.';
+		}
+
+		// Init WebAuthn helper dengan callback error yang ramah
+		var webauthn = new WebAuthn(function (name, message) {
+			const friendlyMessage = getUserFriendlyError(name, message);
+			showPasskeyError(friendlyMessage);
+			// Reset tombol ketika WebAuthn error terjadi
+			resetPasskeyButton();
+		});
+
+		// Cek apakah browser mendukung WebAuthn
+		if (!webauthn.webAuthnSupport()) {
+			var msg = webauthn.notSupportedMessage();
+			if (msg === 'not_secured') {
+				swal('Koneksi Tidak Aman', 'Login dengan passkey memerlukan koneksi HTTPS yang aman. Pastikan Anda mengakses melalui https://', 'warning');
+			} else {
+				swal('Tidak Didukung', 'Browser atau perangkat Anda tidak mendukung login dengan passkey. Silakan gunakan metode login lainnya atau update browser Anda.', 'error');
+			}
+			$('#btn-passkey-direct').prop('disabled', true);
+		}
+
+		// -------------------------------------------------------
+		// Tombol utama: Passkey tanpa username (discoverable)
+		// -------------------------------------------------------
+		$('#btn-passkey-direct').on('click', function () {
+			var $btn = $(this);
+			$btn.prop('disabled', true).html('<span class="spinner-border spinner-border-sm mr-1"></span> Menghubungi perangkat...');
+			$('#msg-challenge-error').addClass('d-none');
+
+			$.ajax({
+				url: 'https://sso.baliprov.dev/passkey-login/challenge-usernameless',
+				method: 'POST',
+				data: { _token: 'ujcmKHkp4NqgxjNNkxyyoyKsq0US0VgPLfLYhgyG' },
+				success: function (resp) {
+					$btn.html('<span class="spinner-border spinner-border-sm mr-1"></span> Sentuh perangkat keamanan Anda...');
+
+					webauthn.sign(resp.publicKey, function (assertionData) {
+						submitVerifyUsernameless(assertionData, $btn);
+					});
+				},
+				error: function (xhr) {
+					var err;
+					if (xhr.responseJSON && xhr.responseJSON.error) {
+						err = xhr.responseJSON.error;
+					} else if (xhr.status === 422) {
+						err = 'Data tidak valid. Silakan coba lagi.';
+					} else if (xhr.status === 500) {
+						err = 'Terjadi kesalahan server. Silakan coba beberapa saat lagi.';
+					} else {
+						err = 'Tidak dapat terhubung ke server. Periksa koneksi internet Anda.';
+					}
+					showPasskeyError(err);
+					// Reset tombol ke keadaan semula
+					resetPasskeyButton();
+				}
+			});
+		});
+
+		// -------------------------------------------------------
+		// Kirim assertion (discoverable / tanpa username)
+		// -------------------------------------------------------
+		function submitVerifyUsernameless(assertionData, $btn) {
+			$btn.html('<span class="spinner-border spinner-border-sm mr-1"></span> Memverifikasi...');
+			
+			$.ajax({
+				url: 'https://sso.baliprov.dev/passkey-login/verify-usernameless',
+				method: 'POST',
+				data: {
+					_token: 'ujcmKHkp4NqgxjNNkxyyoyKsq0US0VgPLfLYhgyG',
+					data: JSON.stringify(assertionData)
+				},
+				success: function (result) {
+					$btn.html('<i class="fas fa-check-circle pr-2"></i> Berhasil! Mengalihkan...');
+					setTimeout(function() {
+						window.location.href = result.redirect;
+					}, 500);
+				},
+				error: function (xhr) {
+					var err;
+					if (xhr.responseJSON && xhr.responseJSON.error) {
+						err = xhr.responseJSON.error;
+					} else if (xhr.status === 422) {
+						err = 'Verifikasi gagal. Pastikan Anda menggunakan perangkat keamanan yang benar.';
+					} else if (xhr.status === 401) {
+						err = 'Tidak dapat memverifikasi identitas Anda. Silakan coba lagi.';
+					} else if (xhr.status === 500) {
+						err = 'Terjadi kesalahan server saat verifikasi. Silakan coba lagi.';
+					} else {
+						err = 'Tidak dapat terhubung untuk verifikasi. Periksa koneksi internet Anda.';
+					}
+					showPasskeyError(err);
+					if ($btn) {
+						resetPasskeyButton();
+					}
+				}
+			});
+		}
+
+		// -------------------------------------------------------
+		// Tampilkan error dengan styling yang lebih menarik
+		// -------------------------------------------------------
+		function showPasskeyError(message) {
+			const $error = $('#msg-challenge-error');
+			$error.html('<i class="fas fa-exclamation-triangle mr-2"></i>' + message).removeClass('d-none');
+			
+			// Tambahkan efek shake untuk menarik perhatian
+			$error.addClass('animate__animated animate__headShake');
+			setTimeout(function() {
+				$error.removeClass('animate__animated animate__headShake');
+			}, 1000);
+		}
+
+	</script>
+
+	<script>
+		// -------------------------------------------------------
+		// Handle Forgot Password Form AJAX
+		// -------------------------------------------------------
+		let resendCountdownInterval = null;
+		let currentResendEmail = '';
+
+		$('#forgotPasswordForm').on('submit', function(e) {
+			e.preventDefault();
+
+			const email = $('#forgot-email').val();
+			const $submitBtn = $('#submitForgotPasswordBtn');
+			const formData = new FormData(this);
+
+			// Show loading state
+			$submitBtn.prop('disabled', true).html('<span class="spinner-border spinner-border-sm mr-2"></span> Mengirim...');
+
+			$.ajax({
+				url: 'https://sso.baliprov.dev/forgot-password',
+				method: 'POST',
+				processData: false,
+				contentType: false,
+				data: formData,
+				success: function(response) {
+					if(response.success) {
+						// Store email untuk resend
+						currentResendEmail = response.email;
+
+						// Close forgot password modal
+						$('#resetPasswordModal').modal('hide');
+
+						// Reset form
+						$('#forgotPasswordForm')[0].reset();
+						$submitBtn.prop('disabled', false).html('<i class="fas fa-envelope mr-2"></i> Kirim Email');
+
+						// Show success modal
+						$('#successEmailMessage').html('Kami telah mengirimkan tautan reset password ke email <strong>' + escapeHtml(email) + '</strong>.');
+						$('#forgotPasswordSuccessModal').modal('show');
+
+						// Start countdown timer
+						startResendCountdown();
+					}
+				},
+				error: function(xhr) {
+					let errorMessage = 'Terjadi kesalahan saat mengirim email.';
+					
+					if(xhr.status === 422 && xhr.responseJSON.message) {
+						errorMessage = xhr.responseJSON.message;
+					} else if(xhr.responseJSON && xhr.responseJSON.message) {
+						errorMessage = xhr.responseJSON.message;
+					}
+
+					// Show error alert
+					$('#panel-form-forgot').html('<div class="alert alert-danger alert-dismissible fade show" role="alert">' +
+						'<i class="fas fa-exclamation-circle mr-2"></i>' + escapeHtml(errorMessage) +
+						'<button type="button" class="close" data-dismiss="alert" aria-label="Close">' +
+						'<span aria-hidden="true">&times;</span></button></div>');
+
+					$submitBtn.prop('disabled', false).html('<i class="fas fa-envelope mr-2"></i> Kirim Email');
+				}
+			});
+		});
+
+		// -------------------------------------------------------
+		// Countdown Timer untuk Resend Email
+		// -------------------------------------------------------
+		function startResendCountdown() {
+			let seconds = 60;
+			const $countdownText = $('#resendCountdown');
+			const $resendBtn = $('#resendEmailBtn');
+
+			$countdownText.text('Tunggu ' + seconds + ' detik sebelum mengirim ulang');
+			$resendBtn.prop('disabled', true);
+
+			if(resendCountdownInterval) clearInterval(resendCountdownInterval);
+
+			resendCountdownInterval = setInterval(function() {
+				seconds--;
+				$countdownText.text('Tunggu ' + seconds + ' detik sebelum mengirim ulang');
+
+				if(seconds <= 0) {
+					clearInterval(resendCountdownInterval);
+					$countdownText.html('<span style="color: #28a745;"><i class="fas fa-check-circle mr-2"></i>Anda sekarang dapat mengirim ulang email</span>');
+					$resendBtn.prop('disabled', false);
+				}
+			}, 1000);
+		}
+
+		// -------------------------------------------------------
+		// Handle Resend Email Button
+		// -------------------------------------------------------
+		$('#resendEmailBtn').on('click', function() {
+			const $btn = $(this);
+			
+			if(!currentResendEmail) {
+				alert('Email tidak ditemukan. Silakan coba lagi.');
+				return;
+			}
+
+			$btn.prop('disabled', true).html('<span class="spinner-border spinner-border-sm mr-2"></span> Mengirim ulang...');
+
+			$.ajax({
+				url: 'https://sso.baliprov.dev/resend-forgot-password',
+				method: 'POST',
+				data: {
+					_token: 'ujcmKHkp4NqgxjNNkxyyoyKsq0US0VgPLfLYhgyG',
+					email: currentResendEmail
+				},
+				success: function(response) {
+					if(response.success) {
+						// Show success message
+						$('#successEmailMessage').html('<i class="fas fa-check-circle mr-2" style="color: #28a745;"></i>Email reset password telah dikirim ulang ke <strong>' + escapeHtml(currentResendEmail) + '</strong>.');
+						
+						// Reset countdown
+						$btn.html('<i class="fas fa-redo mr-2"></i> Kirim Ulang Email');
+						startResendCountdown();
+
+						// Show success alert
+						swal('', 'Email reset password telah dikirim ulang', 'success');
+					}
+				},
+				error: function(xhr) {
+					let errorMessage = 'Terjadi kesalahan saat mengirim ulang email.';
+					
+					if(xhr.responseJSON && xhr.responseJSON.message) {
+						errorMessage = xhr.responseJSON.message;
+					}
+
+					swal('Error', escapeHtml(errorMessage), 'error');
+					$btn.prop('disabled', false).html('<i class="fas fa-redo mr-2"></i> Kirim Ulang Email');
+				}
+			});
+		});
+
+		// -------------------------------------------------------
+		// Utility: Escape HTML untuk keamanan
+		// -------------------------------------------------------
+		function escapeHtml(text) {
+			const map = {
+				'&': '&amp;',
+				'<': '&lt;',
+				'>': '&gt;',
+				'"': '&quot;',
+				"'": '&#039;'
+			};
+			return text.replace(/[&<>"']/g, function(m) { return map[m]; });
+		}
+
+		// -------------------------------------------------------
+		// Handle modal close - cleanup interval
+		// -------------------------------------------------------
+		$('#forgotPasswordSuccessModal').on('hidden.bs.modal', function() {
+			if(resendCountdownInterval) {
+				clearInterval(resendCountdownInterval);
+			}
+		});
+
+		$('#resetPasswordModal').on('hidden.bs.modal', function() {
+			$('#panel-form-forgot').html('');
+		});
+
+	</script>
+</body>
+</html>
